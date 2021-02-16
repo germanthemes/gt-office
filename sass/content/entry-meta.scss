@@ -1,0 +1,39 @@
+.entry-meta {
+	margin: 1rem 0 0;
+}
+
+.entry-meta,
+.entry-tags {
+	@include font-size(15);
+	clear: both;
+}
+
+.entry-meta a:link,
+.entry-meta a:visited,
+.entry-tags a:link,
+.entry-tags a:visited {
+	text-decoration: none;
+}
+
+.entry-meta a:hover,
+.entry-meta a:active,
+.entry-tags a:hover,
+.entry-tags a:active {
+	text-decoration: underline;
+}
+
+.entry-meta .updated:not(.published) {
+	display: none;
+}
+
+/* Hide post meta if they are deactivated in settings */
+body.date-hidden .type-post .entry-meta .posted-on,
+body.author-hidden .type-post .entry-meta .posted-by,
+body.categories-hidden .type-post .posted-in,
+body.tags-hidden.single-post .type-post .entry-tags {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	width: 1px;
+	height: 1px;
+}

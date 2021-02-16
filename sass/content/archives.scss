@@ -1,0 +1,11 @@
+/* Search & Archive Header */
+.archive-header,
+.search-header {
+	.entry-title {
+		@include font-size(22);
+	}
+}
+
+.search-header .search-form {
+	margin-top: 1rem;
+}

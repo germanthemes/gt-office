@@ -1,0 +1,134 @@
+.header-search-enabled {
+	.header-main {
+		position: relative;
+		align-items: center;
+	}
+
+	.primary-menu-toggle {
+		order: 3;
+		margin-left: 0;
+	}
+
+	.primary-navigation {
+		order: 4;
+	}
+
+	.header-search-button {
+		order: 2;
+		margin-left: auto;
+		margin-right: 0.5rem;
+		@include font-size(17);
+		@include font-family(--navi-font);
+		@include font-weight(--navi-font-weight);
+		@include text-transform(--navi-text-transform);
+
+		.header-search-icon {
+			margin: 0;
+			padding: 1rem 0.5rem;
+			@include color(--header-text-color);
+			background: none;
+			border: none;
+
+			&:hover,
+			&:active {
+				cursor: pointer;
+				@include color(--header-hover-color);
+			}
+
+			&:focus {
+				outline: thin dotted;
+				@include color(--header-text-color);
+			}
+
+			.icon-search {
+				margin: 0;
+				padding: 0;
+				width: 26px;
+				height: 26px;
+				vertical-align: middle;
+				fill: currentColor;
+				transition: fill 0.15s ease;
+			}
+		}
+	}
+
+	.header-search-dropdown {
+		display: none;
+		margin: 0;
+		box-sizing: border-box;
+		z-index: 999;
+
+		.header-search-form {
+			display: flex;
+			padding: 1.5rem;
+			border-top: 1px solid;
+			@include border-color(--header-border-color);
+			@include background(--header-color);
+
+			.search-form {
+				flex-grow: 1;
+
+				.search-field {
+					background: #fff;
+					border: none;
+				}
+
+				.search-submit {
+					@include background(--header-text-color);
+
+					.icon-search {
+						@include fill(--header-color);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.header-search-enabled.primary-navigation-active {
+		.primary-navigation {
+			order: 2;
+		}
+
+		.header-search-button {
+			order: 3;
+			margin-left: 1rem;
+
+			.header-search-icon {
+				.icon-search {
+					margin: 4px 0 0;
+					width: 20px;
+					height: 20px;
+					vertical-align: top;
+				}
+			}
+		}
+
+		.header-search-dropdown {
+			position: absolute;
+			margin-top: -1.5rem;
+			width: 100%;
+			max-width: $themeWidth;
+
+			.header-search-main {
+				display: flex;
+				justify-content: flex-end;
+				margin-right: 1.5rem;
+
+				.header-search-form {
+					max-width: 450px;
+					flex-grow: 1;
+					border: 1px solid;
+					@include border-color(--header-border-color);
+				}
+			}
+		}
+	}
+}
+
+/* Hide Header Search in Customizer for instant live preview */
+.header-search-hidden .site-header .header-search-button,
+.header-search-hidden .header-search-dropdown {
+	display: none;
+}

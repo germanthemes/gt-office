@@ -1,0 +1,64 @@
+/* Block Font Sizes */
+.has-small-font-size {
+	font-size: 14px;
+}
+
+.has-medium-font-size {
+	font-size: 20px;
+}
+
+.has-large-font-size {
+	font-size: 24px;
+}
+
+.has-extra-large-font-size {
+	font-size: 32px;
+}
+
+.has-huge-font-size {
+	font-size: 40px;
+}
+
+@media only screen and (min-width: 640px) {
+	.has-small-font-size {
+		font-size: 15px;
+	}
+
+	.has-medium-font-size {
+		font-size: 21px;
+	}
+
+	.has-large-font-size {
+		font-size: 26px;
+	}
+
+	.has-extra-large-font-size {
+		font-size: 34px;
+	}
+
+	.has-huge-font-size {
+		font-size: 44px;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.has-small-font-size {
+		font-size: 16px;
+	}
+
+	.has-medium-font-size {
+		font-size: 22px;
+	}
+
+	.has-large-font-size {
+		font-size: 28px;
+	}
+
+	.has-extra-large-font-size {
+		font-size: 36px;
+	}
+
+	.has-huge-font-size {
+		font-size: 48px;
+	}
+}

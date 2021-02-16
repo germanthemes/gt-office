@@ -1,0 +1,72 @@
+.type-post,
+.type-page,
+.type-attachment {
+	margin: 0 0 1.5rem;
+	padding: 0;
+}
+
+.sticky {
+	@include background(--light-background-color);
+	padding: 2rem;
+}
+
+/* Entry Header */
+.entry-header {
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+.entry-title {
+	margin: 0;
+	padding: 0;
+	@include color(--title-color);
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	@include font-size(28);
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
+}
+
+.entry-title a:link,
+.entry-title a:visited {
+	@include color(--title-color);
+	text-decoration: none;
+}
+
+.entry-title a:hover,
+.entry-title a:active {
+	@include color(--title-hover-color);
+}
+
+/* Entry Content */
+.entry-content {
+	@include font-size(16);
+}
+
+.entry-content::before,
+.entry-content::after {
+	display: table;
+	content: "";
+}
+
+.entry-content::after {
+	clear: both;
+}
+
+.post-nav-links {
+	clear: both;
+}
+
+/* Featured Images */
+.post-image {
+	margin-bottom: 1rem;
+}
+
+.wp-post-image {
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}

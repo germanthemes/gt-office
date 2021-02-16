@@ -1,0 +1,145 @@
+/* Block Spacing */
+.wp-block-audio,
+.wp-block-button,
+.wp-block-buttons,
+.wp-block-columns,
+.wp-block-embed,
+.wp-block-image,
+.wp-block-gallery,
+.wp-block-group,
+.wp-block-cover {
+	margin-bottom: 1.75rem;
+}
+
+/* Paragraph Block */
+p.has-background {
+	padding: 1rem 1.5rem;
+}
+
+.has-drop-cap:not(:focus)::first-letter {
+	font-size: 4.5rem;
+	line-height: 0.7;
+	font-weight: bold;
+}
+
+/* Buttons Block */
+.wp-block-buttons {
+	.wp-block-button {
+		margin: 0 0.5rem 0 0;
+	}
+
+	.wp-block-button:last-child {
+		margin-right: 0;
+	}
+}
+
+/* Button Block */
+.wp-block-button {
+	color: inherit;
+}
+
+.wp-block-button__link {
+	margin: 0;
+	padding: 0.75rem 1.25rem;
+	font-size: 1em;
+	border: none;
+	border-radius: 0;
+	text-decoration: none;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+	padding: calc(0.75rem - 2px) calc(1.25rem - 2px);
+}
+
+.wp-block-button__link:link,
+.wp-block-button__link:visited {
+	text-decoration: none;
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color),
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color):link,
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-text-color):visited {
+	@include color(--button-text-color);
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background) {
+	@include background(--button-color);
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:hover,
+.wp-block-button:not(.is-style-outline) .wp-block-button__link:active {
+	@include color(--button-text-hover-color);
+	@include background(--button-hover-color);
+}
+
+/* Separator Block */
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	max-width: 4rem;
+	height: 4px;
+	@include background(--title-border-color);
+}
+
+/* Quote Block */
+.wp-block-quote.is-style-large {
+	border: none;
+	margin: 0 0 1.75rem;
+	padding: 0;
+	@include font-size(24);
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+.wp-block-quote.is-style-large p {
+	font-size: inherit;
+	font-style: inherit;
+	line-height: inherit;
+}
+
+.wp-block-quote.is-style-large cite {
+	text-align: inherit;
+	@include font-family(--text-font);
+}
+
+/* Pullquote Block */
+.wp-block-pullquote {
+	margin-bottom: 1.75rem;
+	padding: 1.75rem 0;
+	border-bottom: 1px solid;
+	border-top: 1px solid;
+	@include border-color(--light-border-color);
+}
+
+.wp-block-pullquote blockquote {
+	border: none;
+	margin: 0;
+	padding: 0;
+	@include font-size(24);
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+}
+
+.wp-block-pullquote p {
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.wp-block-pullquote blockquote cite {
+	@include color(--text-color);
+	@include font-family(--text-font);
+	font-style: normal;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote {
+	max-width: 100%;
+	padding-left: 1.75rem;
+	padding-right: 1.75rem;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote p {
+	margin-bottom: 1rem;
+	font-size: inherit;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote cite {
+	color: inherit;
+}

@@ -1,0 +1,127 @@
+html {
+	box-sizing: border-box;
+}
+
+/* Inherit box-sizing to make it easier to change the property
+for components that leverage other behavior;
+see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	background: #cccccc; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote {
+	margin: 0 0 1.75rem;
+	padding-left: 1.75rem;
+	border-left: 4px solid;
+	@include border-color(--text-color);
+	@include color(--light-text-color);
+	@include font-size(18);
+}
+
+blockquote p {
+	margin-bottom: 1rem;
+}
+
+blockquote cite {
+	display: block;
+	@include color(--text-color);
+	@include font-size(16);
+}
+
+blockquote cite::before {
+	content: "\2014\00a0";
+}
+
+hr {
+	margin-bottom: 1.75rem;
+	height: 1px;
+	border: 0;
+	@include background(--light-border-color);
+}
+
+ul,
+ol {
+	margin: 0 0 1.75rem;
+	padding: 0 0 0 1.25rem;
+}
+
+ul {
+	list-style: square;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-top: 0.75rem;
+	margin-bottom: 0.75rem;
+	margin-left: 1.25rem;
+}
+
+ul ul,
+ol ul {
+	list-style-type: circle;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 1.5rem;
+}
+
+img {
+	max-width: 100%; /* Adhere to container width. */
+	height: auto; /* Make sure images are scaled correctly. */
+	vertical-align: top;
+}
+
+table {
+	margin: 0 0 1.5rem;
+	width: 100%;
+	border: none;
+	table-layout: fixed;
+}
+
+th,
+td {
+	padding: 0.5rem 1rem;
+	border: 1px solid;
+	@include border-color(--light-border-color);
+}
+
+th {
+	font-weight: normal;
+	text-align: inherit;
+	@include background(--light-background-color);
+}
+
+a {
+	@include color(--link-color);
+	text-decoration: underline;
+}
+
+a:hover,
+a:focus,
+a:active {
+	@include color(--link-hover-color);
+	text-decoration: none;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}

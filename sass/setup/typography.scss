@@ -1,0 +1,108 @@
+body,
+button,
+input,
+select,
+textarea {
+	@include color(--text-color);
+	@include font-size(16);
+	@include font-family(--text-font);
+	@include line-height(--text-line-height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+	@include font-family(--title-font);
+	@include font-weight(--title-font-weight);
+	@include text-transform(--title-text-transform);
+	@include line-height(--title-line-height);
+}
+
+h1 {
+	@include font-size(36);
+}
+
+h2 {
+	@include font-size(28);
+}
+
+h3 {
+	@include font-size(24);
+}
+
+h4 {
+	@include font-size(22);
+}
+
+h5 {
+	@include font-size(20);
+}
+
+h6 {
+	@include font-size(19);
+}
+
+p {
+	margin: 0 0 1.75rem;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+address {
+	margin: 0 0 1.75rem;
+}
+
+pre {
+	overflow: auto;
+	margin-bottom: 1.75rem;
+	padding: 1.75rem;
+	max-width: 100%;
+	border: 1px solid;
+	@include border-color(--light-border-color);
+	@include background(--light-background-color);
+	@include font-size(15);
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	@include line-height(--text-line-height);
+}
+
+code,
+kbd,
+tt,
+var {
+	border-radius: 3px;
+	padding: 2px 4px;
+	@include background(--light-background-color);
+	@include font-size(15);
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+pre > code {
+	background: none;
+	padding: 0;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}

@@ -1,0 +1,108 @@
+.social-icons-nav .social-icons-menu {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+}
+
+.social-icons-nav .social-icons-menu li {
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+}
+
+.social-icons-nav .social-icons-menu li a {
+	display: flex;
+	margin: 0;
+	padding: 0.75rem;
+}
+
+.social-icons-nav .social-icons-menu li a:hover,
+.social-icons-nav .social-icons-menu li a:active {
+	text-decoration: none;
+}
+
+.social-icons-nav .social-icons-menu li a .icon {
+	margin: 0;
+	width: 20px;
+	height: 20px;
+	vertical-align: top;
+	fill: currentColor;
+}
+
+/* Mobile Menu Social Icons */
+.mobile-menu-social-icons {
+	display: none;
+	margin-left: -0.75rem;
+}
+
+.mobile-menu-social-icons.social-icons-nav .social-icons-menu li a {
+	@include color(--header-text-color);
+}
+
+.mobile-menu-social-icons.social-icons-nav .social-icons-menu li a:hover,
+.mobile-menu-social-icons.social-icons-nav .social-icons-menu li a:active {
+	@include color(--header-hover-color);
+}
+
+.mobile-menu-social-icons.social-icons-nav .social-icons-menu li a .icon {
+	margin: 0;
+	width: 24px;
+	height: 24px;
+}
+
+@media only screen and (max-width: 960px) {
+	.mobile-menu-social-icons.toggled-on {
+		display: block;
+	}
+}
+
+/* Header Bar Social Icons */
+.header-bar-social-icons {
+	display: none;
+}
+
+.header-bar-social-icons.social-icons-nav .social-icons-menu li a {
+	padding: 0.25rem 0.5rem;
+	@include color(--header-bar-text-color);
+}
+
+.header-bar-social-icons.social-icons-nav .social-icons-menu li a:hover,
+.header-bar-social-icons.social-icons-nav .social-icons-menu li a:active {
+	@include color(--header-bar-hover-color);
+}
+
+.header-bar-social-icons.social-icons-nav .social-icons-menu li a .icon {
+	margin: 0;
+	width: 18px;
+	height: 18px;
+}
+
+@media only screen and (min-width: 960px) {
+	.header-bar-social-icons {
+		display: block;
+	}
+}
+
+/* Footer Social Icons */
+.footer-social-icons .social-icons-menu {
+	margin-left: -0.5rem;
+}
+
+.footer-social-icons .social-icons-menu li a {
+	@include color(--footer-link-color);
+
+	.icon {
+		margin: 0;
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.footer-social-icons .social-icons-menu li a:hover,
+.footer-social-icons .social-icons-menu li a:active {
+	@include color(--footer-link-hover-color);
+}
