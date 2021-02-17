@@ -44,8 +44,6 @@
 	@include variable(--title-hover-color, $themeColors);
 	@include variable(--widget-title-color, $themeColors);
 
-	@include variable(--widget-background-color, $themeColors);
-
 	// Footer
 	@include variable(--footer-background-color, $themeColors);
 	@include variable(--footer-text-color, $themeColors);

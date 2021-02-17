@@ -40,7 +40,6 @@
 	--title-color: #202020;
 	--title-hover-color: #0068a0;
 	--widget-title-color: #202020;
-	--widget-background-color: #ebebeb;
 	--footer-background-color: #202020;
 	--footer-text-color: rgba(255, 255, 255, 0.5);
 	--footer-link-color: rgba(255, 255, 255, 0.95);
@@ -61,11 +60,11 @@
 # - Layout
 --------------------------------------------------------------*/
 .wp-block {
-	max-width: calc(880px);
+	max-width: calc(840px);
 }
 
 .wp-block[data-align="wide"] {
-	max-width: calc(1120px);
+	max-width: calc(1080px);
 }
 
 .wp-block[data-align="full"] {
@@ -74,11 +73,11 @@
 
 /* Fullwidth Template */
 .gt-fullwidth-page-layout .wp-block {
-	max-width: calc(1328px);
+	max-width: calc(1280px);
 }
 
 .gt-fullwidth-page-layout .wp-block[data-align="wide"] {
-	max-width: calc(1440px);
+	max-width: calc(1360px);
 }
 
 .gt-fullwidth-page-layout .wp-block[data-align="full"] {

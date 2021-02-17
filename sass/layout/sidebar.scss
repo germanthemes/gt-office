@@ -4,9 +4,8 @@
 	max-width: $contentWidth;
 
 	.widget {
-		padding: 1.5rem;
 		margin-bottom: 1.25rem;
-		@include background(--widget-background-color);
+		padding: 0;
 	}
 
 	.widget-title {
@@ -49,7 +48,6 @@
 @media only screen and (min-width: 480px) {
 	.sidebar {
 		.widget {
-			padding: 2rem;
 			margin-bottom: 1.5rem;
 		}
 	}
@@ -76,6 +74,7 @@
 
 			.site-main {
 				flex-basis: 70%;
+				padding-right: 1.5rem;
 
 				.entry-content > .alignwide,
 				.entry-content > .alignfull {
@@ -86,8 +85,8 @@
 
 			.sidebar {
 				max-width: 100%;
-				min-width: 300px;
-				padding-left: 2rem;
+				min-width: 200px;
+				padding-left: 1.5rem;
 				flex-grow: 1;
 				flex-basis: 30%;
 			}
@@ -97,12 +96,14 @@
 	.page-template-template-sidebar-left.has-sidebar .site-content {
 		.site-main {
 			order: 2;
+			padding-right: 0;
+			padding-left: 1.5rem;
 		}
 
 		.sidebar {
 			order: 1;
 			padding-left: 0;
-			padding-right: 2rem;
+			padding-right: 1.5rem;
 		}
 	}
 }
@@ -116,14 +117,24 @@
 
 	.has-sidebar {
 		.site-content {
+			.site-main {
+				padding-right: 2rem;
+			}
+
 			.sidebar {
-				padding-left: 2.5rem;
+				padding-left: 2rem;
 			}
 		}
 	}
 
-	.page-template-template-sidebar-left.has-sidebar .site-content .sidebar {
-		padding-right: 2.5rem;
+	.page-template-template-sidebar-left.has-sidebar .site-content {
+		.site-main {
+			padding-left: 2rem;
+		}
+
+		.sidebar {
+			padding-right: 2rem;
+		}
 	}
 }
 
@@ -136,14 +147,24 @@
 
 	.has-sidebar {
 		.site-content {
+			.site-main {
+				padding-right: 2.5rem;
+			}
+
 			.sidebar {
-				padding-left: 3rem;
+				padding-left: 2.5rem;
 			}
 		}
 	}
 
-	.page-template-template-sidebar-left.has-sidebar .site-content .sidebar {
-		padding-right: 3rem;
+	.page-template-template-sidebar-left.has-sidebar .site-content {
+		.site-main {
+			padding-left: 2.5rem;
+		}
+
+		.sidebar {
+			padding-right: 2.5rem;
+		}
 	}
 }
 
@@ -156,13 +177,23 @@
 
 	.has-sidebar {
 		.site-content {
+			.site-main {
+				padding-right: 3rem;
+			}
+
 			.sidebar {
-				padding-left: 3.5rem;
+				padding-left: 3rem;
 			}
 		}
 	}
 
-	.page-template-template-sidebar-left.has-sidebar .site-content .sidebar {
-		padding-right: 3.5rem;
+	.page-template-template-sidebar-left.has-sidebar .site-content {
+		.site-main {
+			padding-left: 3rem;
+		}
+
+		.sidebar {
+			padding-right: 3rem;
+		}
 	}
 }

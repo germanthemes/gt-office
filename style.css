@@ -83,7 +83,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--title-color: #202020;
 	--title-hover-color: #0068a0;
 	--widget-title-color: #202020;
-	--widget-background-color: #ebebeb;
 	--footer-background-color: #202020;
 	--footer-text-color: rgba(255, 255, 255, 0.5);
 	--footer-link-color: rgba(255, 255, 255, 0.95);
@@ -761,7 +760,7 @@ textarea {
 	padding: 0;
 	width: 100%;
 	overflow: hidden;
-	max-width: 1440px;
+	max-width: 1360px;
 	background-color: #fff;
 	background-color: var(--page-background-color);
 }
@@ -775,12 +774,12 @@ textarea {
 .site-main {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 880px;
+	max-width: 840px;
 }
 
 /* Alignments */
 .entry-content > .alignwide {
-	max-width: 1120px;
+	max-width: 1080px;
 }
 
 .entry-content > .alignfull {
@@ -797,12 +796,12 @@ textarea {
 .entry-content > .alignfull > [class*="__inner-container"] > * {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 880px;
+	max-width: 840px;
 }
 
 .entry-content > .alignwide > [class*="__inner-container"] > *.alignwide,
 .entry-content > .alignfull > [class*="__inner-container"] > *.alignwide {
-	max-width: 1120px;
+	max-width: 1080px;
 }
 
 .entry-content > .alignwide > [class*="__inner-container"] > *.alignfull,
@@ -1461,7 +1460,7 @@ body.site-description-hidden .site-header .site-description {
 		position: absolute;
 		margin-top: -1.5rem;
 		width: 100%;
-		max-width: 1440px;
+		max-width: 1360px;
 	}
 
 	.header-search-enabled.primary-navigation-active .header-search-dropdown .header-search-main {
@@ -1491,14 +1490,12 @@ body.site-description-hidden .site-header .site-description {
 .sidebar {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 880px;
+	max-width: 840px;
 }
 
 .sidebar .widget {
-	padding: 1.5rem;
 	margin-bottom: 1.25rem;
-	background-color: #ebebeb;
-	background-color: var(--widget-background-color);
+	padding: 0;
 }
 
 .sidebar .widget-title {
@@ -1544,7 +1541,6 @@ body.site-description-hidden .site-header .site-description {
 
 @media only screen and (min-width: 480px) {
 	.sidebar .widget {
-		padding: 2rem;
 		margin-bottom: 1.5rem;
 	}
 }
@@ -1568,6 +1564,7 @@ body.site-description-hidden .site-header .site-description {
 
 	.has-sidebar .site-content .site-main {
 		flex-basis: 70%;
+		padding-right: 1.5rem;
 	}
 
 	.has-sidebar .site-content .site-main .entry-content > .alignwide,
@@ -1578,20 +1575,22 @@ body.site-description-hidden .site-header .site-description {
 
 	.has-sidebar .site-content .sidebar {
 		max-width: 100%;
-		min-width: 300px;
-		padding-left: 2rem;
+		min-width: 200px;
+		padding-left: 1.5rem;
 		flex-grow: 1;
 		flex-basis: 30%;
 	}
 
 	.page-template-template-sidebar-left.has-sidebar .site-content .site-main {
 		order: 2;
+		padding-right: 0;
+		padding-left: 1.5rem;
 	}
 
 	.page-template-template-sidebar-left.has-sidebar .site-content .sidebar {
 		order: 1;
 		padding-left: 0;
-		padding-right: 2rem;
+		padding-right: 1.5rem;
 	}
 }
 
@@ -1600,12 +1599,20 @@ body.site-description-hidden .site-header .site-description {
 		margin-bottom: 2.5rem;
 	}
 
+	.has-sidebar .site-content .site-main {
+		padding-right: 2rem;
+	}
+
 	.has-sidebar .site-content .sidebar {
-		padding-left: 2.5rem;
+		padding-left: 2rem;
+	}
+
+	.page-template-template-sidebar-left.has-sidebar .site-content .site-main {
+		padding-left: 2rem;
 	}
 
 	.page-template-template-sidebar-left.has-sidebar .site-content .sidebar {
-		padding-right: 2.5rem;
+		padding-right: 2rem;
 	}
 }
 
@@ -1614,12 +1621,20 @@ body.site-description-hidden .site-header .site-description {
 		margin-bottom: 3rem;
 	}
 
+	.has-sidebar .site-content .site-main {
+		padding-right: 2.5rem;
+	}
+
 	.has-sidebar .site-content .sidebar {
-		padding-left: 3rem;
+		padding-left: 2.5rem;
+	}
+
+	.page-template-template-sidebar-left.has-sidebar .site-content .site-main {
+		padding-left: 2.5rem;
 	}
 
 	.page-template-template-sidebar-left.has-sidebar .site-content .sidebar {
-		padding-right: 3rem;
+		padding-right: 2.5rem;
 	}
 }
 
@@ -1628,12 +1643,20 @@ body.site-description-hidden .site-header .site-description {
 		margin-bottom: 3.5rem;
 	}
 
+	.has-sidebar .site-content .site-main {
+		padding-right: 3rem;
+	}
+
 	.has-sidebar .site-content .sidebar {
-		padding-left: 3.5rem;
+		padding-left: 3rem;
+	}
+
+	.page-template-template-sidebar-left.has-sidebar .site-content .site-main {
+		padding-left: 3rem;
 	}
 
 	.page-template-template-sidebar-left.has-sidebar .site-content .sidebar {
-		padding-right: 3.5rem;
+		padding-right: 3rem;
 	}
 }
 
@@ -2944,8 +2967,8 @@ p.has-background {
 @media only screen and (min-width: 960px) {
 	.site-header,
 	.site-content {
-		padding-left: 2.5rem;
-		padding-right: 2.5rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
 	}
 
 	.header-main {
@@ -2982,8 +3005,8 @@ p.has-background {
 @media only screen and (min-width: 1120px) {
 	.site-header,
 	.site-content {
-		padding-left: 3rem;
-		padding-right: 3rem;
+		padding-left: 4rem;
+		padding-right: 4rem;
 	}
 
 	.header-main {
@@ -2995,8 +3018,8 @@ p.has-background {
 @media only screen and (min-width: 1280px) {
 	.site-header,
 	.site-content {
-		padding-left: 3.5rem;
-		padding-right: 3.5rem;
+		padding-left: 5rem;
+		padding-right: 5rem;
 	}
 
 	.header-main {
@@ -3022,11 +3045,11 @@ p.has-background {
 	}
 }
 
-@media only screen and (min-width: calc( 1440px)) {
+@media only screen and (min-width: calc( 1360px)) {
 	.entry-content > .alignfull {
-		margin-left: calc(100% / 2 - 1440px / 2);
-		margin-right: calc(100% / 2 - 1440px / 2);
-		max-width: 1440px;
+		margin-left: calc(100% / 2 - 1360px / 2);
+		margin-right: calc(100% / 2 - 1360px / 2);
+		max-width: 1360px;
 	}
 }
 
@@ -3376,26 +3399,26 @@ p.has-background {
 /* Fullwidth Page Template */
 body.page-template-template-fullwidth .site-content .site-main,
 body.page-template-template-fullwidth-no-title .site-content .site-main {
-	max-width: 1328px;
+	max-width: 1280px;
 }
 
 body.page-template-template-fullwidth .site-content .site-main .entry-content > .alignwide,
 body.page-template-template-fullwidth-no-title .site-content .site-main .entry-content > .alignwide {
-	max-width: 1440px;
+	max-width: 1360px;
 }
 
 body.page-template-template-fullwidth .site-content .site-main .entry-content > .alignwide > [class*="__inner-container"] > *,
 body.page-template-template-fullwidth .site-content .site-main .entry-content > .alignfull > [class*="__inner-container"] > *,
 body.page-template-template-fullwidth-no-title .site-content .site-main .entry-content > .alignwide > [class*="__inner-container"] > *,
 body.page-template-template-fullwidth-no-title .site-content .site-main .entry-content > .alignfull > [class*="__inner-container"] > * {
-	max-width: 1328px;
+	max-width: 1280px;
 }
 
 body.page-template-template-fullwidth .site-content .site-main .entry-content > .alignwide > [class*="__inner-container"] > *.alignwide,
 body.page-template-template-fullwidth .site-content .site-main .entry-content > .alignfull > [class*="__inner-container"] > *.alignwide,
 body.page-template-template-fullwidth-no-title .site-content .site-main .entry-content > .alignwide > [class*="__inner-container"] > *.alignwide,
 body.page-template-template-fullwidth-no-title .site-content .site-main .entry-content > .alignfull > [class*="__inner-container"] > *.alignwide {
-	max-width: 1440px;
+	max-width: 1360px;
 }
 
 body.page-template-template-fullwidth .site-content .site-main .entry-content > .alignwide > [class*="__inner-container"] > *.alignfull,

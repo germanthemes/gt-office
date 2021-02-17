@@ -8,7 +8,7 @@
 ?>
 
 <?php
-if ( has_nav_menu( 'social-header' ) or
+if ( has_nav_menu( 'secondary' ) or
 	'' !== gt_office_get_option( 'header_phone' ) or
 	'' !== gt_office_get_option( 'header_email' ) or
 	'' !== gt_office_get_option( 'header_address' ) or
