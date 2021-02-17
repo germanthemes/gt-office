@@ -11,6 +11,8 @@ $wideBlockFullwidth: 1440px;
 
 // Theme Colors
 $themeColors: (
+
+	// Block Editor Colors
 	--primary-color              : #0890d0,
 	--secondary-color            : #0068a0,
 	--accent-color               : #00b0f8,
@@ -18,31 +20,46 @@ $themeColors: (
 	--light-gray-color           : #ebebeb,
 	--gray-color                 : #606060,
 	--dark-gray-color            : #202020,
+
+	// Text Colors
 	--text-color                 : #202020,
+	--medium-text-color          : rgba(0, 0, 0, 0.7),
 	--light-text-color           : rgba(0, 0, 0, 0.5),
+
+	// Page
+	--page-background-color      : #fff,
+	--page-border-color          : rgba(0, 0, 0, 0.1),
 	--light-background-color     : rgba(0, 0, 0, 0.05),
 	--medium-background-color    : rgba(0, 0, 0, 0.15),
 	--light-border-color         : rgba(0, 0, 0, 0.1),
 	--medium-border-color        : rgba(0, 0, 0, 0.3),
-	--page-background-color      : #fff,
+
+	// Links and Buttons
 	--link-color                 : #0890d0,
 	--link-hover-color           : #0068a0,
 	--button-color               : #202020,
 	--button-text-color          : #fff,
-	--button-hover-color         : #606060,
+	--button-hover-color         : #0068a0,
 	--button-text-hover-color    : #fff,
-	--header-bar-color           : #202020,
-	--header-bar-text-color      : #fff,
-	--header-bar-hover-color     : #909090,
-	--header-color               : #202020,
-	--header-text-color          : #fff,
-	--header-hover-color         : #909090,
-	--header-border-color        : rgba(255, 255, 255, 0.1),
+
+	// Header
+	--header-bar-color           : #fff,
+	--header-bar-text-color      : #202020,
+	--header-bar-hover-color     : #0068a0,
+	--header-color               : #fff,
+	--header-text-color          : #202020,
+	--header-hover-color         : #0068a0,
+	--header-border-color        : rgba(0, 0, 0, 0.1),
+
+	// Titles
 	--title-color                : #202020,
-	--title-hover-color          : #606060,
+	--title-hover-color          : #0068a0,
 	--widget-title-color         : #202020,
-	--widget-title-hover-color   : #606060,
+	--widget-title-hover-color   : #0068a0,
+
 	--widget-background-color    : #ebebeb,
+
+	// Footer
 	--footer-background-color    : #202020,
 	--footer-text-color          : rgba(255, 255, 255, 0.5),
 	--footer-link-color          : rgba(255, 255, 255, 0.95),

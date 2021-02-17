@@ -17,26 +17,28 @@
 	--dark-gray-color: #202020;
 	--text-color: #202020;
 	--light-text-color: rgba(0, 0, 0, 0.5);
+	--medium-text-color: rgba(0, 0, 0, 0.7);
+	--page-background-color: #fff;
+	--page-border-color: rgba(0, 0, 0, 0.1);
 	--light-background-color: rgba(0, 0, 0, 0.05);
 	--medium-background-color: rgba(0, 0, 0, 0.15);
 	--light-border-color: rgba(0, 0, 0, 0.1);
 	--medium-border-color: rgba(0, 0, 0, 0.3);
-	--page-background-color: #fff;
 	--link-color: #0890d0;
 	--link-hover-color: #0068a0;
 	--button-color: #202020;
 	--button-text-color: #fff;
-	--button-hover-color: #606060;
+	--button-hover-color: #0068a0;
 	--button-text-hover-color: #fff;
-	--header-bar-color: #202020;
-	--header-bar-text-color: #fff;
-	--header-bar-hover-color: #909090;
-	--header-color: #202020;
-	--header-text-color: #fff;
-	--header-hover-color: #909090;
-	--header-border-color: rgba(255, 255, 255, 0.1);
+	--header-bar-color: #fff;
+	--header-bar-text-color: #202020;
+	--header-bar-hover-color: #0068a0;
+	--header-color: #fff;
+	--header-text-color: #202020;
+	--header-hover-color: #0068a0;
+	--header-border-color: rgba(0, 0, 0, 0.1);
 	--title-color: #202020;
-	--title-hover-color: #606060;
+	--title-hover-color: #0068a0;
 	--widget-title-color: #202020;
 	--widget-background-color: #ebebeb;
 	--footer-background-color: #202020;
@@ -477,7 +479,7 @@ p.has-background {
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:active {
 	color: #fff;
 	color: var(--button-text-hover-color);
-	background-color: #606060;
+	background-color: #0068a0;
 	background-color: var(--button-hover-color);
 }
 

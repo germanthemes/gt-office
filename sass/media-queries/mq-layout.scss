@@ -16,13 +16,9 @@
 		padding-right: 2rem;
 	}
 
-	.site-header {
+	.header-main {
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
-	}
-
-	.site-content {
-		padding-top: 2rem;
 	}
 
 	.type-post,
@@ -46,18 +42,16 @@
 		padding-right: 2.5rem;
 	}
 
-	.site-header {
-		padding-top: 1.75rem;
-		padding-bottom: 1.75rem;
+	.header-main {
+		align-items: initial;
+		flex-direction: column;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
 	}
 
 	.site-branding {
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
-	}
-
-	.site-content {
-		padding-top: 2.5rem;
 	}
 
 	.type-post,
@@ -86,13 +80,9 @@
 		padding-right: 3rem;
 	}
 
-	.site-header {
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-	}
-
-	.site-content {
-		padding-top: 3rem;
+	.header-main {
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
 	}
 }
 
@@ -103,13 +93,9 @@
 		padding-right: 3.5rem;
 	}
 
-	.site-header {
-		padding-top: 2.25rem;
-		padding-bottom: 2.25rem;
-	}
-
-	.site-content {
-		padding-top: 3.5rem;
+	.header-main {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
 	}
 
 	.type-post,

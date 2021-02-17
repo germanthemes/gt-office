@@ -1,4 +1,6 @@
 :root {
+
+	// Block Editor Colors
 	@include variable(--primary-color, $themeColors);
 	@include variable(--secondary-color, $themeColors);
 	@include variable(--accent-color, $themeColors);
@@ -6,19 +8,29 @@
 	@include variable(--light-gray-color, $themeColors);
 	@include variable(--gray-color, $themeColors);
 	@include variable(--dark-gray-color, $themeColors);
+
+	// Text Colors
 	@include variable(--text-color, $themeColors);
 	@include variable(--light-text-color, $themeColors);
+	@include variable(--medium-text-color, $themeColors);
+
+	// Page
+	@include variable(--page-background-color, $themeColors);
+	@include variable(--page-border-color, $themeColors);
 	@include variable(--light-background-color, $themeColors);
 	@include variable(--medium-background-color, $themeColors);
 	@include variable(--light-border-color, $themeColors);
 	@include variable(--medium-border-color, $themeColors);
-	@include variable(--page-background-color, $themeColors);
+
+	// Links and Buttons
 	@include variable(--link-color, $themeColors);
 	@include variable(--link-hover-color, $themeColors);
 	@include variable(--button-color, $themeColors);
 	@include variable(--button-text-color, $themeColors);
 	@include variable(--button-hover-color, $themeColors);
 	@include variable(--button-text-hover-color, $themeColors);
+
+	// Header
 	@include variable(--header-bar-color, $themeColors);
 	@include variable(--header-bar-text-color, $themeColors);
 	@include variable(--header-bar-hover-color, $themeColors);
@@ -26,15 +38,22 @@
 	@include variable(--header-text-color, $themeColors);
 	@include variable(--header-hover-color, $themeColors);
 	@include variable(--header-border-color, $themeColors);
+
+	// Titles
 	@include variable(--title-color, $themeColors);
 	@include variable(--title-hover-color, $themeColors);
 	@include variable(--widget-title-color, $themeColors);
+
 	@include variable(--widget-background-color, $themeColors);
+
+	// Footer
 	@include variable(--footer-background-color, $themeColors);
 	@include variable(--footer-text-color, $themeColors);
 	@include variable(--footer-link-color, $themeColors);
 	@include variable(--footer-link-hover-color, $themeColors);
 	@include variable(--footer-border-color, $themeColors);
+
+	// Typography Styling
 	@include variable(--text-font, $themeFonts);
 	@include variable(--title-font, $themeFonts);
 	@include variable(--navi-font, $themeFonts);

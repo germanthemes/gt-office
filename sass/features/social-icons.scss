@@ -60,30 +60,37 @@
 	}
 }
 
-/* Header Bar Social Icons */
-.header-bar-social-icons {
+/* Header Social Icons */
+.header-social-icons {
 	display: none;
+	margin-left: auto;
 }
 
-.header-bar-social-icons.social-icons-nav .social-icons-menu li a {
-	padding: 0.25rem 0.5rem;
-	@include color(--header-bar-text-color);
+.header-social-icons.social-icons-nav .social-icons-menu li a {
+	@include color(--header-text-color);
 }
 
-.header-bar-social-icons.social-icons-nav .social-icons-menu li a:hover,
-.header-bar-social-icons.social-icons-nav .social-icons-menu li a:active {
-	@include color(--header-bar-hover-color);
+.header-social-icons.social-icons-nav .social-icons-menu li a:hover,
+.header-social-icons.social-icons-nav .social-icons-menu li a:active {
+	@include color(--header-hover-color);
 }
 
-.header-bar-social-icons.social-icons-nav .social-icons-menu li a .icon {
+.header-social-icons.social-icons-nav .social-icons-menu li a .icon {
 	margin: 0;
-	width: 18px;
-	height: 18px;
+	width: 24px;
+	height: 24px;
 }
 
 @media only screen and (min-width: 960px) {
-	.header-bar-social-icons {
+	.header-social-icons {
 		display: block;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.header-social-icons.social-icons-nav .social-icons-menu li a .icon {
+		width: 26px;
+		height: 26px;
 	}
 }
 
