@@ -252,8 +252,8 @@ if ( ! function_exists( 'gt_office_entry_meta' ) ) :
 	 */
 	function gt_office_entry_meta() {
 
-		$postmeta  = gt_office_entry_date();
-		$postmeta .= gt_office_entry_author();
+		$postmeta  = gt_office_entry_author();
+		$postmeta .= gt_office_entry_date();
 		$postmeta .= gt_office_entry_categories();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
@@ -279,11 +279,7 @@ if ( ! function_exists( 'gt_office_entry_date' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'gt-office' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
+		$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 		return '<span class="posted-on">' . $posted_on . '</span>';
 	}
@@ -325,13 +321,9 @@ if ( ! function_exists( 'gt_office_entry_categories' ) ) :
 			return;
 		}
 
-		$posted_in = sprintf(
-			/* translators: %s: post category. */
-			esc_html_x( 'in %s', 'post category', 'gt-office' ),
-			get_the_category_list( ', ' )
-		);
+		$categories = get_the_category_list( ', ' );
 
-		return '<span class="posted-in"> ' . $posted_in . '</span>';
+		return '<span class="posted-in"> ' . $categories . '</span>';
 	}
 endif;
 

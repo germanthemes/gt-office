@@ -21,6 +21,10 @@
 		@include font-size(17);
 	}
 
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
 	.entry-meta,
 	.entry-tags,
 	.more-link,
@@ -57,9 +61,7 @@
 	}
 
 	.entry-meta,
-	.entry-tags,
-	.more-link,
-	.pagination {
+	.entry-tags {
 		@include font-size(17);
 	}
 }

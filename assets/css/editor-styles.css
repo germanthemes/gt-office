@@ -26,9 +26,9 @@
 	--medium-border-color: rgba(0, 0, 0, 0.3);
 	--link-color: #0890d0;
 	--link-hover-color: #0068a0;
-	--button-color: #202020;
+	--button-color: #0068a0;
 	--button-text-color: #fff;
-	--button-hover-color: #0068a0;
+	--button-hover-color: #202020;
 	--button-text-hover-color: #fff;
 	--header-bar-color: #fff;
 	--header-bar-text-color: #202020;
@@ -470,7 +470,7 @@ p.has-background {
 }
 
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:not(.has-background) {
-	background-color: #202020;
+	background-color: #0068a0;
 	background-color: var(--button-color);
 }
 
@@ -478,7 +478,7 @@ p.has-background {
 .wp-block-button:not(.is-style-outline) .wp-block-button__link:active {
 	color: #fff;
 	color: var(--button-text-hover-color);
-	background-color: #0068a0;
+	background-color: #202020;
 	background-color: var(--button-hover-color);
 }
 

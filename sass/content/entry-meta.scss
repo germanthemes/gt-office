@@ -5,25 +5,67 @@
 .entry-meta,
 .entry-tags {
 	@include font-size(15);
+	@include color(--light-text-color);
 	clear: both;
 }
 
+.entry-meta > span {
+	display: block;
+}
+
 .entry-meta a:link,
-.entry-meta a:visited,
+.entry-meta a:visited {
+	@include color(--light-text-color);
+	text-decoration: none;
+}
+
+.entry-meta a:hover,
+.entry-meta a:active {
+	@include color(--text-color);
+}
+
+.entry-meta .updated:not(.published) {
+	display: none;
+}
+
+.entry-meta .posted-by a:link,
+.entry-meta .posted-by a:visited {
+	font-weight: bold;
+	@include color(--medium-text-color);
+}
+
+.entry-meta .posted-by a:hover,
+.entry-meta .posted-by a:active {
+	@include color(--text-color);
+}
+
+@media only screen and (min-width: 360px) {
+	.entry-meta > span {
+		display: inline;
+	}
+
+	.entry-meta > span::after {
+		display: inline-block;
+		margin: 0 1rem;
+		@include color(--light-text-color);
+		content: "\2022";
+	}
+
+	.entry-meta .posted-in::after {
+		margin: 0;
+		content: "";
+	}
+}
+
+/* Entry Tags */
 .entry-tags a:link,
 .entry-tags a:visited {
 	text-decoration: none;
 }
 
-.entry-meta a:hover,
-.entry-meta a:active,
 .entry-tags a:hover,
 .entry-tags a:active {
 	text-decoration: underline;
-}
-
-.entry-meta .updated:not(.published) {
-	display: none;
 }
 
 /* Hide post meta if they are deactivated in settings */
@@ -36,4 +78,12 @@ body.tags-hidden.single-post .type-post .entry-tags {
 	clip: rect(1px, 1px, 1px, 1px);
 	width: 1px;
 	height: 1px;
+}
+
+body.author-hidden .type-post .entry-meta .posted-by::after,
+body.date-hidden .type-post .entry-meta .posted-on::after,
+body.categories-hidden .type-post .entry-meta .posted-on::after,
+body.date-hidden.categories-hidden .type-post .entry-meta .posted-by::after {
+	margin: 0;
+	content: "";
 }
