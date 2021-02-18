@@ -52,7 +52,7 @@ ol {
 }
 
 ul {
-	list-style: square;
+	list-style: circle;
 }
 
 ol {
@@ -68,7 +68,7 @@ li > ol {
 
 ul ul,
 ol ul {
-	list-style-type: circle;
+	list-style-type: square;
 }
 
 dt {

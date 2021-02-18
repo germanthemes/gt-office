@@ -1,6 +1,6 @@
 @media only screen and (min-width: 640px) {
 	.wp-block-group.has-background {
-		padding: 2rem;
+		padding: 1.5rem 2rem;
 	}
 }
 
@@ -13,7 +13,7 @@
 
 @media only screen and (min-width: 960px) {
 	.wp-block-group.has-background {
-		padding: 2.5rem;
+		padding: 2rem 3rem;
 	}
 
 	.wp-block-column:not(:first-child) {
@@ -23,7 +23,7 @@
 
 @media only screen and (min-width: 1120px) {
 	.wp-block-group.has-background {
-		padding: 3rem;
+		padding: 2.5rem 4rem;
 	}
 
 	.wp-block-column:not(:first-child) {
@@ -33,6 +33,6 @@
 
 @media only screen and (min-width: 1280px) {
 	.wp-block-group.has-background {
-		padding: 3.5rem;
+		padding: 3rem 5rem;
 	}
 }

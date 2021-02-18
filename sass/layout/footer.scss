@@ -59,8 +59,14 @@
 }
 
 /* Footer Navigation */
+.footer-menus {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
 .footer-menus-inner {
-	padding: 1.5rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	border-bottom: 1px solid;
 	@include border-color(--footer-border-color);
 }
@@ -133,8 +139,14 @@
 }
 
 /* Footer Copyright */
+.footer-copyright-background {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
 .footer-copyright {
-	padding: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	border-top: 1px solid;
 	@include border-color(--footer-border-color);
 	@include font-size(14);

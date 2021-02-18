@@ -513,7 +513,7 @@ ol {
 }
 
 ul {
-	list-style: square;
+	list-style: circle;
 }
 
 ol {
@@ -529,7 +529,7 @@ li > ol {
 
 ul ul,
 ol ul {
-	list-style-type: circle;
+	list-style-type: square;
 }
 
 dt {
@@ -2749,8 +2749,14 @@ p.has-background {
 }
 
 /* Footer Navigation */
+.footer-menus {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
 .footer-menus-inner {
-	padding: 1.5rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	border-bottom: 1px solid;
 	border-color: rgba(255, 255, 255, 0.1);
 	border-color: var(--footer-border-color);
@@ -2829,8 +2835,14 @@ p.has-background {
 }
 
 /* Footer Copyright */
+.footer-copyright-background {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
 .footer-copyright {
-	padding: 1rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	border-top: 1px solid;
 	border-color: rgba(255, 255, 255, 0.1);
 	border-color: var(--footer-border-color);
@@ -3254,7 +3266,7 @@ p.has-background {
 --------------------------------------------------------------*/
 @media only screen and (min-width: 640px) {
 	.wp-block-group.has-background {
-		padding: 2rem;
+		padding: 1.5rem 2rem;
 	}
 }
 
@@ -3267,7 +3279,7 @@ p.has-background {
 
 @media only screen and (min-width: 960px) {
 	.wp-block-group.has-background {
-		padding: 2.5rem;
+		padding: 2rem 3rem;
 	}
 
 	.wp-block-column:not(:first-child) {
@@ -3277,7 +3289,7 @@ p.has-background {
 
 @media only screen and (min-width: 1120px) {
 	.wp-block-group.has-background {
-		padding: 3rem;
+		padding: 2.5rem 4rem;
 	}
 
 	.wp-block-column:not(:first-child) {
@@ -3287,7 +3299,7 @@ p.has-background {
 
 @media only screen and (min-width: 1280px) {
 	.wp-block-group.has-background {
-		padding: 3.5rem;
+		padding: 3rem 5rem;
 	}
 }
 
@@ -3372,8 +3384,16 @@ p.has-background {
 }
 
 @media only screen and (min-width: 640px) {
-	.footer-menus-inner {
-		padding: 2rem;
+	.footer-menus,
+	.footer-copyright-background {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.footer-menus-inner,
+	.footer-copyright {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
 	}
 
 	.footer-widgets {
@@ -3402,12 +3422,20 @@ p.has-background {
 }
 
 @media only screen and (min-width: 960px) {
-	.footer-menus-inner {
-		padding: 2.5rem;
+	.footer-menus,
+	.footer-copyright-background {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	.footer-menus-inner,
+	.footer-copyright {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
 	}
 
 	.footer-widgets {
-		padding: 2.5rem 2.5rem 0;
+		padding: 3rem 3rem 0;
 	}
 
 	.footer-widgets-columns {
@@ -3421,10 +3449,6 @@ p.has-background {
 	.footer-widgets .widget {
 		margin-bottom: 2.5rem;
 	}
-
-	.footer-copyright {
-		padding: 1.5rem;
-	}
 }
 
 @media only screen and (min-width: 1040px) {
@@ -3436,7 +3460,19 @@ p.has-background {
 	}
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1120px) {
+	.footer-menus,
+	.footer-copyright-background {
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+
+	.footer-menus-inner,
+	.footer-copyright {
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
+	}
+
 	.footer-widgets-columns {
 		margin-right: -4rem;
 	}
@@ -3447,6 +3483,36 @@ p.has-background {
 
 	.footer-widgets .widget {
 		margin-bottom: 3rem;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.footer-menus,
+	.footer-copyright-background {
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+
+	.footer-menus-inner,
+	.footer-copyright {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+
+	.footer-widgets {
+		padding: 5rem 5rem 0;
+	}
+
+	.footer-widgets-columns {
+		margin-right: -5rem;
+	}
+
+	.footer-widget-column {
+		padding-right: 5rem;
+	}
+
+	.footer-widgets .widget {
+		margin-bottom: 3.5rem;
 	}
 }
 
