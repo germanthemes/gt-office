@@ -38,10 +38,6 @@
 		border-bottom: none;
 	}
 
-	.top-navigation ul {
-		@include font-size(15);
-	}
-
 	.top-navigation ul a {
 		padding: 0.75rem 1rem;
 		border: none;
@@ -93,10 +89,10 @@
 	.top-navigation .page_item_has_children > a > .icon {
 		position: relative;
 		display: inline-block;
-		left: 0.5rem;
+		left: 0.35rem;
 		top: 0.1rem;
-		width: 13px;
-		height: 13px;
+		width: 11px;
+		height: 11px;
 		@include fill(--header-bar-text-color);
 		transition: fill 0.15s ease;
 	}
@@ -116,5 +112,15 @@
 	.top-navigation ul .menu-item-has-children > a:hover > .icon,
 	.top-navigation ul .page_item_has_children > a:hover > .icon {
 		@include fill(--header-bar-hover-color);
+	}
+}
+
+@media only screen and (min-width: 1120px) {
+	.top-navigation ul {
+		@include font-size(15);
+	}
+
+	.top-navigation ul ul {
+		@include font-size(14);
 	}
 }

@@ -1278,7 +1278,7 @@ body.site-description-hidden .site-header .site-description {
 # - Header Bar
 --------------------------------------------------------------*/
 .header-bar {
-	padding: 0.5rem 1rem;
+	padding: 0;
 	color: #202020;
 	color: var(--header-bar-text-color);
 	background-color: #fff;
@@ -1290,6 +1290,7 @@ body.site-description-hidden .site-header .site-description {
 
 .header-bar-main {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 }
 
@@ -1311,7 +1312,7 @@ body.site-description-hidden .site-header .site-description {
 	flex-wrap: wrap;
 	order: 2;
 	margin-left: auto;
-	padding: 0.25rem 0;
+	padding: 0.75rem 0;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -1340,6 +1341,13 @@ body.site-description-hidden .site-header .site-description {
 	margin-top: 2px;
 }
 
+@media only screen and (min-width: 1120px) {
+	.header-bar-content {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+}
+
 /* Customizer Buttons */
 .customize-partial-edit-shortcut-gt_office_theme_options-header_phone,
 .customize-partial-edit-shortcut-gt_office_theme_options-header_email,
@@ -1359,8 +1367,8 @@ body.site-description-hidden .site-header .site-description {
 	color: #202020;
 	color: var(--header-bar-text-color);
 	list-style: none;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 14px;
+	font-size: 0.875rem;
 	font-family: "Barlow", arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
 	font-weight: normal;
@@ -1390,7 +1398,7 @@ body.site-description-hidden .site-header .site-description {
 .top-navigation ul a {
 	display: block;
 	margin: 0;
-	padding: 1rem;
+	padding: 0.75rem 1.25rem;
 	border-top: 1px solid;
 	border-color: rgba(0, 0, 0, 0.1);
 	border-color: var(--header-bar-border-color);
@@ -1419,8 +1427,8 @@ body.site-description-hidden .site-header .site-description {
 
 /* Submenus */
 .top-navigation ul ul {
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 13px;
+	font-size: 0.8125rem;
 	background-color: var(--header-bar-background-color);
 }
 
@@ -1451,8 +1459,8 @@ body.site-description-hidden .site-header .site-description {
 	color: #202020;
 	color: var(--header-bar-text-color);
 	text-decoration: none;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 14px;
+	font-size: 0.875rem;
 	font-family: "Barlow", arial, helvetica, sans-serif;
 	font-family: var(--navi-font);
 	font-weight: normal;
@@ -1483,9 +1491,9 @@ body.site-description-hidden .site-header .site-description {
 }
 
 .secondary-menu-toggle .icon {
-	margin: 0.15rem 0 0;
-	width: 22px;
-	height: 22px;
+	margin: 0.25rem 0 0;
+	width: 18px;
+	height: 18px;
 	vertical-align: top;
 	fill: #202020;
 	fill: var(--header-bar-text-color);
@@ -1513,7 +1521,7 @@ body.site-description-hidden .site-header .site-description {
 	display: block;
 	top: 0;
 	right: 0;
-	padding: 1.05rem 1.5rem;
+	padding: 0.75rem 1.25rem;
 	background: none;
 	border: none;
 }
@@ -1532,8 +1540,8 @@ body.site-description-hidden .site-header .site-description {
 
 .top-navigation .dropdown-toggle .icon {
 	margin: 0.35em 0 0;
-	width: 18px;
-	height: 18px;
+	width: 16px;
+	height: 16px;
 	vertical-align: top;
 	fill: #202020;
 	fill: var(--header-bar-text-color);
@@ -3532,11 +3540,6 @@ p.has-background {
 		border-bottom: none;
 	}
 
-	.top-navigation ul {
-		font-size: 15px;
-		font-size: 0.9375rem;
-	}
-
 	.top-navigation ul a {
 		padding: 0.75rem 1rem;
 		border: none;
@@ -3590,10 +3593,10 @@ p.has-background {
 	.top-navigation .page_item_has_children > a > .icon {
 		position: relative;
 		display: inline-block;
-		left: 0.5rem;
+		left: 0.35rem;
 		top: 0.1rem;
-		width: 13px;
-		height: 13px;
+		width: 11px;
+		height: 11px;
 		fill: #202020;
 		fill: var(--header-bar-text-color);
 		transition: fill 0.15s ease;
@@ -3615,6 +3618,18 @@ p.has-background {
 	.top-navigation ul .page_item_has_children > a:hover > .icon {
 		fill: #0068a0;
 		fill: var(--header-bar-hover-color);
+	}
+}
+
+@media only screen and (min-width: 1120px) {
+	.top-navigation ul {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	.top-navigation ul ul {
+		font-size: 14px;
+		font-size: 0.875rem;
 	}
 }
 

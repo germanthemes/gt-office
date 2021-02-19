@@ -9,7 +9,7 @@
 	padding: 0;
 	@include color(--header-bar-text-color);
 	list-style: none;
-	@include font-size(16);
+	@include font-size(14);
 	@include font-family(--navi-font);
 	@include font-weight(--navi-font-weight);
 	@include text-transform(--navi-text-transform);
@@ -36,7 +36,7 @@
 .top-navigation ul a {
 	display: block;
 	margin: 0;
-	padding: 1rem;
+	padding: 0.75rem 1.25rem;
 	border-top: 1px solid;
 	@include border-color(--header-bar-border-color);
 	text-decoration: none;
@@ -62,7 +62,7 @@
 
 /* Submenus */
 .top-navigation ul ul {
-	@include font-size(15);
+	@include font-size(13);
 	@include background(--header-bar-background-color);
 }
 
@@ -92,7 +92,7 @@
 	background: none;
 	@include color(--header-bar-text-color);
 	text-decoration: none;
-	@include font-size(15);
+	@include font-size(14);
 	@include font-family(--navi-font);
 	@include font-weight(--navi-font-weight);
 	@include text-transform(--navi-text-transform);
@@ -118,9 +118,9 @@
 }
 
 .secondary-menu-toggle .icon {
-	margin: 0.15rem 0 0;
-	width: 22px;
-	height: 22px;
+	margin: 0.25rem 0 0;
+	width: 18px;
+	height: 18px;
 	vertical-align: top;
 	@include fill(--header-bar-text-color);
 	transition: fill 0.15s ease;
@@ -146,7 +146,7 @@
 	display: block;
 	top: 0;
 	right: 0;
-	padding: 1.05rem 1.5rem;
+	padding: 0.75rem 1.25rem;
 	background: none;
 	border: none;
 }
@@ -164,8 +164,8 @@
 
 .top-navigation .dropdown-toggle .icon {
 	margin: 0.35em 0 0;
-	width: 18px;
-	height: 18px;
+	width: 16px;
+	height: 16px;
 	vertical-align: top;
 	@include fill(--header-bar-text-color);
 	transition: fill 0.15s ease;
