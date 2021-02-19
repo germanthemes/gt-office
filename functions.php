@@ -166,7 +166,7 @@ add_action( 'enqueue_block_editor_assets', 'gt_office_theme_fonts', 1 );
  */
 function gt_office_get_fonts_url() {
 	$font_families = array(
-		'Barlow:400,400italic,700,700italic',
+		'Inter:400,400italic,700,700italic',
 	);
 
 	$query_args = array(

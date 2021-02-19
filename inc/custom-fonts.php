@@ -543,6 +543,7 @@ class GT_Office_Custom_Fonts {
 			'Inder'                    => 'Inder',
 			'Indie Flower'             => 'Indie Flower',
 			'Inika'                    => 'Inika',
+			'Inter'                    => 'Inter',
 			'Irish Grover'             => 'Irish Grover',
 			'Istok Web'                => 'Istok Web',
 			'Italiana'                 => 'Italiana',

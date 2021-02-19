@@ -70,9 +70,9 @@ Copyright: 2017 IcoMoon.io
 License: Distributed under the terms of the MIT License (https://github.com/WPTT/webfont-loader/blob/master/LICENSE)
 Copyright: 2020 Ari Stathopoulos, WordPress Themes Team
 
-7. Default Font: Barlow - https://fonts.google.com/specimen/Barlow
+7. Default Font: Inter - https://fonts.google.com/specimen/Inter
 License: Distributed under the terms of the Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
-Copyright: Jeremy Tribby
+Copyright: Rasmus Andersson
 
 8. The first photo used in screenshot.png is from StockSnap: https://stocksnap.io/photo/blonde-woman-S6JWBGXSUM
 License: Distributed under the terms of the Creative Commons CC0 license (https://creativecommons.org/publicdomain/zero/1.0/)
