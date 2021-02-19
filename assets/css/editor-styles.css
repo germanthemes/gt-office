@@ -61,11 +61,11 @@
 # - Layout
 --------------------------------------------------------------*/
 .wp-block {
-	max-width: calc(840px);
+	max-width: calc(800px);
 }
 
 .wp-block[data-align="wide"] {
-	max-width: calc(1080px);
+	max-width: calc(1040px);
 }
 
 .wp-block[data-align="full"] {
