@@ -1877,6 +1877,10 @@ body.date-hidden.categories-hidden .type-post .entry-meta .posted-by::after {
 	text-decoration: none;
 }
 
+/*--------------------------------------------------------------
+# - Archives
+--------------------------------------------------------------*/
+
 /* Theme Pagination */
 .pagination {
 	margin: 0 0 1.5rem;
@@ -1924,6 +1928,9 @@ body.date-hidden.categories-hidden .type-post .entry-meta .posted-by::after {
 	margin-top: 1rem;
 }
 
+/*--------------------------------------------------------------
+# - Comments
+--------------------------------------------------------------*/
 .comments-area {
 	margin: 0 0 1.5rem;
 	padding: 0;

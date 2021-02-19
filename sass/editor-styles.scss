@@ -14,29 +14,29 @@
 /*--------------------------------------------------------------
 # - Layout
 --------------------------------------------------------------*/
-@import 'editor/layout.scss';
+@import '8-editor/layout.scss';
 
 /*--------------------------------------------------------------
 # - Elements
 --------------------------------------------------------------*/
-@import 'editor/elements.scss';
+@import '8-editor/elements.scss';
 
 /*--------------------------------------------------------------
 # - Blocks
 --------------------------------------------------------------*/
-@import "blocks/formatting-blocks";
-@import "blocks/media-blocks";
-@import "blocks/container-blocks";
-@import 'media-queries/mq-blocks.scss';
-@import 'blocks/block-styles.scss';
-@import 'editor/editor-blocks.scss';
+@import "5-blocks/formatting-blocks";
+@import "5-blocks/media-blocks";
+@import "5-blocks/container-blocks";
+@import '7-media-queries/mq-blocks.scss';
+@import '5-blocks/block-styles.scss';
+@import '8-editor/editor-blocks.scss';
 
 /*--------------------------------------------------------------
 # - Colors
 --------------------------------------------------------------*/
-@import 'blocks/colors.scss';
+@import '5-blocks/colors.scss';
 
 /*--------------------------------------------------------------
 # - Font Sizes
 --------------------------------------------------------------*/
-@import 'blocks/font-sizes.scss';
+@import '5-blocks/font-sizes.scss';
