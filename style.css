@@ -820,12 +820,12 @@ textarea {
 .header-main {
 	display: flex;
 	flex-wrap: wrap;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 	border-bottom: 1px solid;
 	border-color: rgba(0, 0, 0, 0.1);
 	border-color: var(--header-border-color);
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 }
 
 .site-branding {
@@ -3124,8 +3124,8 @@ p.has-background {
 --------------------------------------------------------------*/
 @media only screen and (min-width: 320px) {
 	.site-title {
-		font-size: 28px;
-		font-size: 1.75rem;
+		font-size: 26px;
+		font-size: 1.625rem;
 	}
 
 	.entry-title {
@@ -3136,8 +3136,8 @@ p.has-background {
 
 @media only screen and (min-width: 640px) {
 	.site-title {
-		font-size: 32px;
-		font-size: 2rem;
+		font-size: 28px;
+		font-size: 1.75rem;
 	}
 
 	.entry-title {
@@ -3165,8 +3165,8 @@ p.has-background {
 
 @media only screen and (min-width: 960px) {
 	.site-title {
-		font-size: 36px;
-		font-size: 2.25rem;
+		font-size: 32px;
+		font-size: 2rem;
 	}
 
 	.site-description {
@@ -3182,8 +3182,8 @@ p.has-background {
 
 @media only screen and (min-width: 1280px) {
 	.site-title {
-		font-size: 40px;
-		font-size: 2.5rem;
+		font-size: 36px;
+		font-size: 2.25rem;
 	}
 
 	.entry-title {
@@ -3225,9 +3225,9 @@ p.has-background {
 	}
 
 	.header-main {
-		padding-top: 1.5rem;
-		padding-bottom: 1.5rem;
-		margin-bottom: 1.5rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		margin-bottom: 2rem;
 	}
 
 	.type-post,
@@ -3254,8 +3254,6 @@ p.has-background {
 	.header-main {
 		align-items: initial;
 		flex-direction: column;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
 		border: none;
 		margin-bottom: 0;
 	}
