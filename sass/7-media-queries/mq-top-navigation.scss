@@ -1,0 +1,120 @@
+@media only screen and (min-width: 400px) {
+	.secondary-menu-toggle .menu-toggle-text {
+		display: inline-block;
+		margin-left: 0.25rem;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.header-bar {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
+	.secondary-menu-toggle,
+	.top-navigation .dropdown-toggle {
+		display: none;
+	}
+
+	.top-navigation ul,
+	.top-navigation ul ul {
+		display: block;
+	}
+
+	.secondary-navigation {
+		display: flex;
+		width: auto;
+		align-items: center;
+		order: 1;
+	}
+
+	#header-bar .top-navigation > ul.menu {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		margin: 0;
+		border-bottom: none;
+	}
+
+	.top-navigation ul {
+		@include font-size(15);
+	}
+
+	.top-navigation ul a {
+		padding: 0.75rem 1rem;
+		border: none;
+	}
+
+	/* Dropdown Menus */
+	.top-navigation ul ul {
+		position: absolute;
+		left: -999em;
+		top: 100%;
+		z-index: 99999;
+		padding: 0.5rem;
+		border: 1px solid;
+		@include border-color(--header-bar-border-color);
+		@include background(--header-bar-color);
+	}
+
+	.top-navigation ul li:hover > ul,
+	.top-navigation ul li.focus > ul {
+		left: 0;
+		right: auto;
+	}
+
+	.top-navigation ul ul li a {
+		width: 16rem;
+	}
+
+	.top-navigation ul ul ul {
+		left: -999em;
+		margin-top: -1px;
+		top: 0;
+	}
+
+	.top-navigation ul ul li:hover > ul,
+	.top-navigation ul ul li.focus > ul {
+		left: 100%;
+		right: auto;
+	}
+
+	.top-navigation ul ul li a,
+	.top-navigation ul ul ul li a,
+	.top-navigation ul ul ul ul li a {
+		padding: 1rem;
+		border: none;
+	}
+
+	/* Dropdown Icons */
+	.top-navigation .menu-item-has-children > a > .icon,
+	.top-navigation .page_item_has_children > a > .icon {
+		position: relative;
+		display: inline-block;
+		left: 0.5rem;
+		top: 0.1rem;
+		width: 13px;
+		height: 13px;
+		@include fill(--header-bar-text-color);
+		transition: fill 0.15s ease;
+	}
+
+	.top-navigation ul ul .menu-item-has-children > a > .icon,
+	.top-navigation ul ul .page_item_has_children > a > .icon {
+		position: absolute;
+		left: auto;
+		right: 1em;
+		top: 50%;
+		margin-top: -0.5rem;
+		-webkit-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
+
+	.top-navigation ul .menu-item-has-children > a:hover > .icon,
+	.top-navigation ul .page_item_has_children > a:hover > .icon {
+		@include fill(--header-bar-hover-color);
+	}
+}

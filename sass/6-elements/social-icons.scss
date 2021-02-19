@@ -55,7 +55,7 @@
 }
 
 @media only screen and (max-width: 960px) {
-	.mobile-menu-social-icons.toggled-on {
+	.main-navigation.toggled-on + .mobile-menu-social-icons {
 		display: block;
 	}
 }

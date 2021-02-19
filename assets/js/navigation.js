@@ -6,107 +6,117 @@
  */
 
 (function( $ ) {
-	var masthead, menuToggle, siteNavContain, siteNavigation;
 
-	function initMainNavigation( container ) {
+	function initNavigation( containerClass, naviClass ) {
+		var container  = $( containerClass );
+		var navigation = $( naviClass );
 
-		// Add dropdown toggle that displays child menu items.
-		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false } )
-			.append( gtOfficeScreenReaderText.icon )
-			.append( $( '<span />', { 'class': 'screen-reader-text', text: gtOfficeScreenReaderText.expand } ) );
-
-		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
-
-		// Set the active submenu dropdown toggle button initial state.
-		container.find( '.current-menu-ancestor > button' )
-			.addClass( 'toggled-on' )
-			.attr( 'aria-expanded', 'true' )
-			.find( '.screen-reader-text' )
-			.text( gtOfficeScreenReaderText.collapse );
-
-		// Set the active submenu initial state.
-		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
-
-		container.find( '.dropdown-toggle' ).click( function( e ) {
-			var _this = $( this ),
-				screenReaderSpan = _this.find( '.screen-reader-text' );
-
-			e.preventDefault();
-			_this.toggleClass( 'toggled-on' );
-			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
-
-			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
-
-			screenReaderSpan.text( screenReaderSpan.text() === gtOfficeScreenReaderText.expand ? gtOfficeScreenReaderText.collapse : gtOfficeScreenReaderText.expand );
-		} );
-	}
-
-	initMainNavigation( $( '.main-navigation' ) );
-
-	masthead       = $( '#masthead' );
-	menuToggle     = masthead.find( '.menu-toggle' );
-	siteNavContain = masthead.find( '.main-navigation' );
-	siteNavigation = masthead.find( '.main-navigation > ul.menu' );
-	socialIcons    = masthead.find( '.mobile-menu-social-icons' );
-
-	// Enable menuToggle.
-	(function() {
-
-		// Return early if menuToggle is missing.
-		if ( ! menuToggle.length ) {
+		// Return early if navigation is missing.
+		if ( ! navigation.length ) {
 			return;
 		}
 
-		// Add an initial value for the attribute.
-		menuToggle.attr( 'aria-expanded', 'false' );
+		// Enable menuToggle.
+		(function() {
+			var menuToggle = container.find( '.menu-toggle' );
 
-		menuToggle.on( 'click.gt_office', function() {
-			siteNavContain.toggleClass( 'toggled-on' );
-			socialIcons.toggleClass( 'toggled-on' );
+			// Return early if menuToggle is missing.
+			if ( ! menuToggle.length ) {
+				return;
+			}
 
-			$( this ).attr( 'aria-expanded', siteNavContain.hasClass( 'toggled-on' ) );
-		});
-	})();
+			// Add an initial value for the attribute.
+			menuToggle.attr( 'aria-expanded', 'false' );
 
-	// Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility.
-	(function() {
-		if ( ! siteNavigation.length || ! siteNavigation.children().length ) {
-			return;
-		}
+			menuToggle.on( 'click.gt_office_', function() {
+				navigation.toggleClass( 'toggled-on' );
 
-		// Toggle `focus` class to allow submenu access on tablets.
-		function toggleFocusClassTouchScreen() {
-			if ( 'none' === $( '.menu-toggle' ).css( 'display' ) ) {
+				$( this ).attr( 'aria-expanded', navigation.hasClass( 'toggled-on' ) );
+			});
+		})();
 
-				$( document.body ).on( 'touchstart.gt_office', function( e ) {
-					if ( ! $( e.target ).closest( '.main-navigation li' ).length ) {
-						$( '.main-navigation li' ).removeClass( 'focus' );
-					}
-				});
+		// Enable dropdownToggles that displays child menu items.
+		(function() {
 
-				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' )
-					.on( 'touchstart.gt_office', function( e ) {
-						var el = $( this ).parent( 'li' );
+			var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false } )
+				.append( gtOfficeScreenReaderText.icon )
+				.append( $( '<span />', { 'class': 'screen-reader-text', text: gtOfficeScreenReaderText.expand } ) );
 
-						if ( ! el.hasClass( 'focus' ) ) {
-							e.preventDefault();
-							el.toggleClass( 'focus' );
-							el.siblings( '.focus' ).removeClass( 'focus' );
+			navigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
+
+			// Set the active submenu dropdown toggle button initial state.
+			navigation.find( '.current-menu-ancestor > button' )
+				.addClass( 'toggled-on' )
+				.attr( 'aria-expanded', 'true' )
+				.find( '.screen-reader-text' )
+				.text( gtOfficeScreenReaderText.collapse );
+
+			// Set the active submenu initial state.
+			navigation.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
+
+			navigation.find( '.dropdown-toggle' ).click( function( e ) {
+				var _this = $( this ),
+					screenReaderSpan = _this.find( '.screen-reader-text' );
+
+				e.preventDefault();
+				_this.toggleClass( 'toggled-on' );
+				_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+
+				_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+
+				screenReaderSpan.text( screenReaderSpan.text() === gtOfficeScreenReaderText.expand ? gtOfficeScreenReaderText.collapse : gtOfficeScreenReaderText.expand );
+			} );
+		})();
+
+		// Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility.
+		(function() {
+			var menuList   = navigation.children( 'ul.menu' );
+
+			if ( ! menuList.length || ! menuList.children().length ) {
+				return;
+			}
+
+			// Toggle `focus` class to allow submenu access on tablets.
+			function toggleFocusClassTouchScreen() {
+				if ( 'none' === $( '.menu-toggle' ).css( 'display' ) ) {
+
+					$( document.body ).on( 'touchstart.gt_office_', function( e ) {
+						if ( ! $( e.target ).closest( naviClass + ' li' ).length ) {
+							$( naviClass + ' li' ).removeClass( 'focus' );
 						}
 					});
 
-			} else {
-				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.gt_office' );
+					menuList.find( '.menu-item-has-children > a, .page_item_has_children > a' )
+						.on( 'touchstart.gt_office_', function( e ) {
+							var el = $( this ).parent( 'li' );
+
+							if ( ! el.hasClass( 'focus' ) ) {
+								e.preventDefault();
+								el.toggleClass( 'focus' );
+								el.siblings( '.focus' ).removeClass( 'focus' );
+							}
+						});
+
+				} else {
+					menuList.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.gt_office_' );
+				}
 			}
-		}
 
-		if ( 'ontouchstart' in window ) {
-			$( window ).on( 'resize.gt_office', toggleFocusClassTouchScreen );
-			toggleFocusClassTouchScreen();
-		}
+			if ( 'ontouchstart' in window ) {
+				$( window ).on( 'resize.gt_office_', toggleFocusClassTouchScreen );
+				toggleFocusClassTouchScreen();
+			}
 
-		siteNavigation.find( 'a' ).on( 'focus.gt_office blur.gt_office', function() {
-			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
-		});
-	})();
+			menuList.find( 'a' ).on( 'focus.gt_office_ blur.gt_office_', function() {
+				$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
+			});
+		})();
+	}
+
+	// Init Main Navigation.
+	initNavigation( '.header-main', '.main-navigation' );
+
+	// Init Top Navigation.
+	initNavigation( '.header-bar', '.top-navigation' );
+
 })( jQuery );

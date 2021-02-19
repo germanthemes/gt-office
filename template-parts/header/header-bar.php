@@ -51,13 +51,32 @@ if ( has_nav_menu( 'secondary' ) or
 
 			</div>
 
-			<?php if ( has_nav_menu( 'social-header' ) ) : ?>
+			<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 
-				<div class="header-bar-social-icons social-icons-nav">
+				<button class="secondary-menu-toggle menu-toggle" aria-controls="secondary-menu" aria-expanded="false">
+					<?php
+					echo gt_office_get_svg( 'ellipsis' );
+					echo gt_office_get_svg( 'close' );
+					?>
+					<span class="menu-toggle-text"><?php esc_html_e( 'Menu', 'gt-office' ); ?></span>
+				</button>
 
-					<?php gt_office_social_icons_menu( 'social-header' ); ?>
+				<div class="secondary-navigation">
 
-				</div>
+					<nav class="top-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Secondary Menu', 'gt-office' ); ?>">
+
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'secondary',
+								'menu_id'        => 'secondary-menu',
+								'container'      => false,
+							)
+						);
+						?>
+					</nav><!-- .top-navigation -->
+
+				</div><!-- .secondary-navigation -->
 
 			<?php endif; ?>
 

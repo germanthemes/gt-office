@@ -76,6 +76,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--header-bar-color: #fff;
 	--header-bar-text-color: #202020;
 	--header-bar-hover-color: #0068a0;
+	--header-bar-border-color: rgba(0, 0, 0, 0.1);
 	--header-color: #fff;
 	--header-text-color: #202020;
 	--header-hover-color: #0068a0;
@@ -1210,7 +1211,7 @@ body.site-description-hidden .site-header .site-description {
 }
 
 @media only screen and (max-width: 960px) {
-	.mobile-menu-social-icons.toggled-on {
+	.main-navigation.toggled-on + .mobile-menu-social-icons {
 		display: block;
 	}
 }
@@ -1289,7 +1290,6 @@ body.site-description-hidden .site-header .site-description {
 
 .header-bar-main {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 }
 
@@ -1309,6 +1309,8 @@ body.site-description-hidden .site-header .site-description {
 .header-bar-content {
 	display: flex;
 	flex-wrap: wrap;
+	order: 2;
+	margin-left: auto;
 	padding: 0.25rem 0;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -1319,7 +1321,7 @@ body.site-description-hidden .site-header .site-description {
 .header-bar-content .header-address {
 	display: flex;
 	align-items: center;
-	margin-right: 1.5rem;
+	margin-right: 1rem;
 }
 
 .header-bar-content .header-phone .icon,
@@ -1343,6 +1345,221 @@ body.site-description-hidden .site-header .site-description {
 .customize-partial-edit-shortcut-gt_office_theme_options-header_email,
 .customize-partial-edit-shortcut-gt_office_theme_options-header_address {
 	margin-left: -18px;
+}
+
+.secondary-navigation {
+	position: relative;
+	width: 100%;
+	order: 3;
+}
+
+.top-navigation ul {
+	margin: 0;
+	padding: 0;
+	color: #202020;
+	color: var(--header-bar-text-color);
+	list-style: none;
+	font-size: 16px;
+	font-size: 1rem;
+	font-family: "Barlow", arial, helvetica, sans-serif;
+	font-family: var(--navi-font);
+	font-weight: normal;
+	font-weight: var(--navi-font-weight);
+	text-transform: none;
+	text-transform: var(--navi-text-transform);
+}
+
+/* Hide the menu on small screens when JavaScript is available. */
+.top-navigation ul,
+.top-navigation .menu-item-has-children > a > .icon,
+.top-navigation .page_item_has_children > a > .icon,
+.top-navigation ul a > .icon {
+	display: none;
+}
+
+.top-navigation.toggled-on > ul.menu {
+	display: block;
+}
+
+/* Menu Items Styling */
+.top-navigation ul li {
+	position: relative;
+	margin: 0;
+}
+
+.top-navigation ul a {
+	display: block;
+	margin: 0;
+	padding: 1rem;
+	border-top: 1px solid;
+	border-color: rgba(0, 0, 0, 0.1);
+	border-color: var(--header-bar-border-color);
+	text-decoration: none;
+}
+
+.top-navigation ul a,
+.top-navigation ul a:link,
+.top-navigation ul a:visited {
+	color: #202020;
+	color: var(--header-bar-text-color);
+	text-decoration: none;
+	transition: all 0.15s ease;
+}
+
+.top-navigation ul a:hover,
+.top-navigation ul a:active,
+.top-navigation ul a:focus {
+	color: #0068a0;
+	color: var(--header-bar-hover-color);
+}
+
+.top-navigation ul li.current-menu-item > a {
+	text-decoration: underline;
+}
+
+/* Submenus */
+.top-navigation ul ul {
+	font-size: 15px;
+	font-size: 0.9375rem;
+	background-color: var(--header-bar-background-color);
+}
+
+.is-amp-page .top-navigation ul button.toggled-on + ul,
+.top-navigation ul ul.toggled-on {
+	display: block;
+}
+
+.top-navigation ul ul a {
+	padding-left: 2rem;
+}
+
+.top-navigation ul ul ul a {
+	padding-left: 4rem;
+}
+
+.top-navigation ul ul ul ul a {
+	padding-left: 6rem;
+}
+
+/* Top Navigation Toggle */
+.secondary-menu-toggle {
+	display: block;
+	margin: 0;
+	padding: 0.75rem 1rem;
+	border: none;
+	background: none;
+	color: #202020;
+	color: var(--header-bar-text-color);
+	text-decoration: none;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	font-family: "Barlow", arial, helvetica, sans-serif;
+	font-family: var(--navi-font);
+	font-weight: normal;
+	font-weight: var(--navi-font-weight);
+	text-transform: none;
+	text-transform: var(--navi-text-transform);
+	text-align: left;
+	transition: all 0.15s ease;
+}
+
+.secondary-menu-toggle .menu-toggle-text {
+	display: none;
+}
+
+.secondary-menu-toggle:focus {
+	outline: thin dotted;
+	color: #202020;
+	color: var(--header-bar-text-color);
+	background: none;
+}
+
+.secondary-menu-toggle:hover,
+.secondary-menu-toggle:active {
+	color: #0068a0;
+	color: var(--header-bar-hover-color);
+	background: none;
+	cursor: pointer;
+}
+
+.secondary-menu-toggle .icon {
+	margin: 0.15rem 0 0;
+	width: 22px;
+	height: 22px;
+	vertical-align: top;
+	fill: #202020;
+	fill: var(--header-bar-text-color);
+	transition: fill 0.15s ease;
+}
+
+.secondary-menu-toggle:hover .icon,
+.secondary-menu-toggle:active .icon {
+	fill: #0068a0;
+	fill: var(--header-bar-hover-color);
+}
+
+.secondary-menu-toggle[aria-expanded="true"] .icon-ellipsis,
+.secondary-menu-toggle[aria-expanded="false"] .icon-close {
+	display: none;
+}
+
+.secondary-menu-toggle[aria-expanded="true"] .icon-close {
+	display: inline-block;
+}
+
+/* Submenu Dropdown Toggles */
+.top-navigation .dropdown-toggle {
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	padding: 1.05rem 1.5rem;
+	background: none;
+	border: none;
+}
+
+.top-navigation .dropdown-toggle:focus {
+	outline: thin dotted;
+	color: #202020;
+	color: var(--header-bar-text-color);
+	background: none;
+}
+
+.top-navigation .dropdown-toggle:hover,
+.top-navigation .dropdown-toggle:active {
+	background: none;
+}
+
+.top-navigation .dropdown-toggle .icon {
+	margin: 0.35em 0 0;
+	width: 18px;
+	height: 18px;
+	vertical-align: top;
+	fill: #202020;
+	fill: var(--header-bar-text-color);
+	transition: fill 0.15s ease;
+}
+
+.top-navigation .dropdown-toggle:hover .icon,
+.top-navigation .dropdown-toggle:active .icon,
+.top-navigation .dropdown-toggle:focus .icon {
+	fill: #0068a0;
+	fill: var(--header-bar-hover-color);
+}
+
+.top-navigation .dropdown-toggle.toggled-on .icon {
+	-ms-transform: rotate(-180deg); /* IE 9 */
+	-webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */
+	transform: rotate(-180deg);
+}
+
+.top-navigation ul ul .dropdown-toggle {
+	padding: 1rem 1.2rem;
+}
+
+.top-navigation ul ul .dropdown-toggle .icon {
+	width: 17px;
+	height: 17px;
 }
 
 /*--------------------------------------------------------------
@@ -3272,6 +3489,132 @@ p.has-background {
 	.main-navigation ul .page_item_has_children > a:hover > .icon {
 		fill: #0068a0;
 		fill: var(--header-hover-color);
+	}
+}
+
+@media only screen and (min-width: 400px) {
+	.secondary-menu-toggle .menu-toggle-text {
+		display: inline-block;
+		margin-left: 0.25rem;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.header-bar {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
+	.secondary-menu-toggle,
+	.top-navigation .dropdown-toggle {
+		display: none;
+	}
+
+	.top-navigation ul,
+	.top-navigation ul ul {
+		display: block;
+	}
+
+	.secondary-navigation {
+		display: flex;
+		width: auto;
+		align-items: center;
+		order: 1;
+	}
+
+	#header-bar .top-navigation > ul.menu {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		margin: 0;
+		border-bottom: none;
+	}
+
+	.top-navigation ul {
+		font-size: 15px;
+		font-size: 0.9375rem;
+	}
+
+	.top-navigation ul a {
+		padding: 0.75rem 1rem;
+		border: none;
+	}
+
+	/* Dropdown Menus */
+	.top-navigation ul ul {
+		position: absolute;
+		left: -999em;
+		top: 100%;
+		z-index: 99999;
+		padding: 0.5rem;
+		border: 1px solid;
+		border-color: rgba(0, 0, 0, 0.1);
+		border-color: var(--header-bar-border-color);
+		background-color: #fff;
+		background-color: var(--header-bar-color);
+	}
+
+	.top-navigation ul li:hover > ul,
+	.top-navigation ul li.focus > ul {
+		left: 0;
+		right: auto;
+	}
+
+	.top-navigation ul ul li a {
+		width: 16rem;
+	}
+
+	.top-navigation ul ul ul {
+		left: -999em;
+		margin-top: -1px;
+		top: 0;
+	}
+
+	.top-navigation ul ul li:hover > ul,
+	.top-navigation ul ul li.focus > ul {
+		left: 100%;
+		right: auto;
+	}
+
+	.top-navigation ul ul li a,
+	.top-navigation ul ul ul li a,
+	.top-navigation ul ul ul ul li a {
+		padding: 1rem;
+		border: none;
+	}
+
+	/* Dropdown Icons */
+	.top-navigation .menu-item-has-children > a > .icon,
+	.top-navigation .page_item_has_children > a > .icon {
+		position: relative;
+		display: inline-block;
+		left: 0.5rem;
+		top: 0.1rem;
+		width: 13px;
+		height: 13px;
+		fill: #202020;
+		fill: var(--header-bar-text-color);
+		transition: fill 0.15s ease;
+	}
+
+	.top-navigation ul ul .menu-item-has-children > a > .icon,
+	.top-navigation ul ul .page_item_has_children > a > .icon {
+		position: absolute;
+		left: auto;
+		right: 1em;
+		top: 50%;
+		margin-top: -0.5rem;
+		-webkit-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+	}
+
+	.top-navigation ul .menu-item-has-children > a:hover > .icon,
+	.top-navigation ul .page_item_has_children > a:hover > .icon {
+		fill: #0068a0;
+		fill: var(--header-bar-hover-color);
 	}
 }
 

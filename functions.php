@@ -44,6 +44,7 @@ function gt_office_setup() {
 	// Register Navigation Menus.
 	register_nav_menus( array(
 		'primary'       => esc_html__( 'Main Navigation', 'gt-office' ),
+		'secondary'     => esc_html__( 'Top Navigation', 'gt-office' ),
 		'footer'        => esc_html__( 'Footer Navigation', 'gt-office' ),
 		'social-header' => esc_html__( 'Social Icons (Header)', 'gt-office' ),
 		'social-footer' => esc_html__( 'Social Icons (Footer)', 'gt-office' ),
@@ -108,8 +109,8 @@ function gt_office_scripts() {
 	wp_enqueue_style( 'gt-office-stylesheet', get_stylesheet_uri(), array(), $theme_version );
 
 	// Register and enqueue navigation.js.
-	if ( has_nav_menu( 'primary' ) or has_nav_menu( 'social-header' ) ) {
-		wp_enqueue_script( 'gt-office-navigation', get_theme_file_uri( '/assets/js/navigation.min.js' ), array( 'jquery' ), '20200911', true );
+	if ( has_nav_menu( 'primary' ) or has_nav_menu( 'secondary' ) ) {
+		wp_enqueue_script( 'gt-office-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20210210', true );
 		$gt_office_l10n = array(
 			'expand'   => esc_html__( 'Expand child menu', 'gt-office' ),
 			'collapse' => esc_html__( 'Collapse child menu', 'gt-office' ),

@@ -8,7 +8,6 @@
 
 .header-bar-main {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 }
 
@@ -27,6 +26,8 @@
 .header-bar-content {
 	display: flex;
 	flex-wrap: wrap;
+	order: 2;
+	margin-left: auto;
 	padding: 0.25rem 0;
 	@include font-size(14);
 
@@ -35,7 +36,7 @@
 	.header-address {
 		display: flex;
 		align-items: center;
-		margin-right: 1.5rem;
+		margin-right: 1rem;
 
 		.icon {
 			margin: 0 0.25rem 0 0;
