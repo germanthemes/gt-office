@@ -222,6 +222,22 @@ function gt_office_customize_register_blog_settings( $wp_customize ) {
 		'type'     => 'checkbox',
 		'priority' => 120,
 	) );
+
+	// Add Setting and Control for showing post navigation.
+	$wp_customize->add_setting( 'gt_office_theme_options[post_navigation]', array(
+		'default'           => $default['post_navigation'],
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'gt_office_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'gt_office_theme_options[post_navigation]', array(
+		'label'    => esc_html__( 'Display previous/next post navigation', 'gt-office' ),
+		'section'  => 'gt_office_section_blog',
+		'settings' => 'gt_office_theme_options[post_navigation]',
+		'type'     => 'checkbox',
+		'priority' => 130,
+	) );
 }
 add_action( 'customize_register', 'gt_office_customize_register_blog_settings' );
 

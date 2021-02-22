@@ -368,6 +368,24 @@ if ( ! function_exists( 'gt_office_more_link' ) ) :
 endif;
 
 
+if ( ! function_exists( 'gt_office_post_navigation' ) ) :
+	/**
+	 * Displays Single Post Navigation
+	 */
+	function gt_office_post_navigation() {
+
+		if ( true === gt_office_get_option( 'post_navigation' ) || is_customize_preview() ) :
+
+			the_post_navigation( array(
+				'prev_text' => '<span class="nav-link-text">' . esc_html_x( 'Previous Post', 'post navigation', 'gt-office' ) . '</span><h3 class="entry-title">%title</h3>',
+				'next_text' => '<span class="nav-link-text">' . esc_html_x( 'Next Post', 'post navigation', 'gt-office' ) . '</span><h3 class="entry-title">%title</h3>',
+			) );
+
+		endif;
+	}
+endif;
+
+
 if ( ! function_exists( 'gt_office_pagination' ) ) :
 	/**
 	 * Displays pagination on archive pages

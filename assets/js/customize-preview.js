@@ -138,6 +138,17 @@
 		} );
 	} );
 
+	// Post Navigation checkbox.
+	wp.customize( 'gt_office_theme_options[post_navigation]', function( value ) {
+		value.bind( function( newval ) {
+			if ( false === newval ) {
+				$( 'body' ).addClass( 'post-navigation-hidden' );
+			} else {
+				$( 'body' ).removeClass( 'post-navigation-hidden' );
+			}
+		} );
+	} );
+
 	/* Primary Color Option */
 	wp.customize( 'gt_office_theme_options[primary_color]', function( value ) {
 		value.bind( function( newval ) {

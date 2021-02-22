@@ -2029,7 +2029,8 @@ body.site-description-hidden .site-header .site-description {
 body.date-hidden .type-post .entry-meta .posted-on,
 body.author-hidden .type-post .entry-meta .posted-by,
 body.categories-hidden .type-post .posted-in,
-body.tags-hidden.single-post .type-post .entry-tags {
+body.tags-hidden.single-post .type-post .entry-tags,
+body.post-navigation-hidden.single-post .post-navigation {
 	position: absolute;
 	overflow: hidden;
 	clip: rect(1px, 1px, 1px, 1px);
@@ -2073,6 +2074,60 @@ body.date-hidden.categories-hidden .type-post .entry-meta .posted-by::after {
 	background-color: #202020;
 	background-color: var(--button-hover-color);
 	text-decoration: none;
+}
+
+/* Post Navigation */
+.post-navigation {
+	margin: 0 0 1.5rem;
+}
+
+.post-navigation .nav-links .nav-previous,
+.post-navigation .nav-links .nav-next {
+	word-wrap: break-word;
+}
+
+.post-navigation .nav-links .nav-next {
+	margin-top: 1.25rem;
+	text-align: right;
+}
+
+/* Post Navigation Link Styling */
+.post-navigation .nav-links a:link,
+.post-navigation .nav-links a:visited {
+	color: rgba(0, 0, 0, 0.5);
+	color: var(--light-text-color);
+	text-decoration: none;
+}
+
+.post-navigation .nav-links .entry-title {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.post-navigation .nav-links a:link .entry-title,
+.post-navigation .nav-links a:visited .entry-title {
+	color: #202020;
+	color: var(--title-color);
+}
+
+.post-navigation .nav-links a:hover .entry-title,
+.post-navigation .nav-links a:active .entry-title {
+	color: #0068a0;
+	color: var(--title-hover-color);
+}
+
+.post-navigation .nav-links .nav-link-text {
+	display: block;
+}
+
+.post-navigation .nav-links .nav-previous .nav-link-text::before {
+	margin-right: 5px;
+	content: "\00AB";
+}
+
+.post-navigation .nav-links .nav-next .nav-link-text::after {
+	margin-left: 5px;
+	content: "\00BB";
 }
 
 /*--------------------------------------------------------------
@@ -3214,6 +3269,24 @@ p.has-background {
 	.entry-header,
 	.post-image {
 		margin-bottom: 1.25rem;
+	}
+
+	.post-navigation .nav-links {
+		display: flex;
+	}
+
+	.post-navigation .nav-links .nav-previous,
+	.post-navigation .nav-links .nav-next {
+		margin: 0;
+		width: 50%;
+	}
+
+	.post-navigation .nav-links .nav-previous {
+		padding-right: 1rem;
+	}
+
+	.post-navigation .nav-links .nav-next {
+		padding-left: 1rem;
 	}
 }
 

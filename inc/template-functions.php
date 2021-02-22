@@ -61,6 +61,11 @@ function gt_office_body_classes( $classes ) {
 		$classes[] = 'tags-hidden';
 	}
 
+	// Hide Post Navigation in Customizer for instant live preview.
+	if ( is_customize_preview() && is_single() && false === $theme_options['post_navigation'] ) {
+		$classes[] = 'post-navigation-hidden';
+	}
+
 	// Add Blog Page class?
 	if ( gt_office_is_blog_page() ) {
 		$classes[] = 'is-blog-page';

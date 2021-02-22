@@ -27,6 +27,7 @@
 
 	</div><!-- .entry-content -->
 
+	<?php gt_office_post_navigation(); ?>
 	<?php gt_office_widget_area( 'after-posts' ); ?>
 	<?php do_action( 'gt_office_after_posts' ); ?>
 
