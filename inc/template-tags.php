@@ -344,6 +344,20 @@ if ( ! function_exists( 'gt_office_entry_tags' ) ) :
 endif;
 
 
+if ( ! function_exists( 'gt_office_more_link' ) ) :
+	/**
+	 * Displays the more link on posts
+	 */
+	function gt_office_more_link() {
+		?>
+
+		<a href="<?php echo esc_url( get_permalink() ); ?>" class="more-link"><?php esc_html_e( 'Continue reading', 'gt-office' ); ?></a>
+
+		<?php
+	}
+endif;
+
+
 if ( ! function_exists( 'gt_office_pagination' ) ) :
 	/**
 	 * Displays pagination on archive pages

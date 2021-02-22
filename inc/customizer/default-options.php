@@ -57,6 +57,8 @@ function gt_office_default_options() {
 		'header_address'     => '',
 		'header_search'      => false,
 		'scroll_to_top'      => false,
+		'blog_content'       => 'full',
+		'excerpt_length'     => 55,
 		'meta_date'          => true,
 		'meta_author'        => true,
 		'meta_categories'    => true,

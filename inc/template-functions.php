@@ -142,6 +142,31 @@ add_filter( 'wp_enqueue_scripts', 'gt_office_retina_logo', 11 );
 
 
 /**
+ * Change excerpt length for default posts
+ *
+ * @param int $length Length of excerpt in number of words.
+ * @return int
+ */
+function gt_office_excerpt_length( $length ) {
+
+	if ( is_admin() ) {
+		return $length;
+	}
+
+	// Get excerpt length from database.
+	$excerpt_length = gt_office_get_option( 'excerpt_length' );
+
+	// Return excerpt text.
+	if ( $excerpt_length >= 0 ) :
+		return absint( $excerpt_length );
+	else :
+		return 55; // Number of words.
+	endif;
+}
+add_filter( 'excerpt_length', 'gt_office_excerpt_length' );
+
+
+/**
  * Add dropdown icon if menu item has children.
  *
  * @param  string $title The menu item's title.

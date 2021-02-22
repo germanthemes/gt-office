@@ -33,6 +33,23 @@
 		wp.customize.control( 'gt_office_theme_options[retina_logo]', setupControl );
 	} );
 
+	// Based on https://make.xwp.co/2016/07/24/dependently-contextual-customizer-controls/
+	wp.customize( 'gt_office_theme_options[blog_content]', function( setting ) {
+		var setupControl = function( control ) {
+			var setActiveState, isDisplayed;
+			isDisplayed = function() {
+				return 'excerpt' === setting.get();
+			};
+			setActiveState = function() {
+				control.active.set( isDisplayed() );
+			};
+			setActiveState();
+			setting.bind( setActiveState );
+			control.active.validate = isDisplayed;
+		};
+		wp.customize.control( 'gt_office_theme_options[excerpt_length]', setupControl );
+	} );
+
 	/**
 	 * The Customizer looks for wp.customizer.controlConstructor[type] functions
 	 * where type == the type member of a WP_Customize_Control
