@@ -67,6 +67,6 @@ add_action( 'customize_controls_enqueue_scripts', 'gt_office_customizer_controls
  * Embed CSS styles Customizer Controls.
  */
 function gt_office_customizer_controls_css() {
-	wp_enqueue_style( 'gt-office-customizer-controls', get_template_directory_uri() . '/assets/css/customizer-controls.css', array(), '20210210' );
+	wp_enqueue_style( 'gt-office-customizer-controls', get_template_directory_uri() . '/assets/css/customizer-controls.css', array(), '20210212' );
 }
 add_action( 'customize_controls_print_styles', 'gt_office_customizer_controls_css' );

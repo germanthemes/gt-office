@@ -74,15 +74,68 @@ function gt_office_customize_register_blog_settings( $wp_customize ) {
 		'priority' => 30,
 	) );
 
+	// Add Featured Images Headline.
+	$wp_customize->add_control( new GT_Office_Customize_Header_Control(
+		$wp_customize, 'gt_office_theme_options[featured_images]', array(
+			'label'    => esc_html__( 'Featured Images', 'gt-office' ),
+			'section'  => 'gt_office_section_blog',
+			'settings' => array(),
+			'priority' => 40,
+		)
+	) );
+
+	// Add Setting and Control for featured images on blog and archives.
+	$wp_customize->add_setting( 'gt_office_theme_options[post_image_archives]', array(
+		'default'           => $default['post_image_archives'],
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'gt_office_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'gt_office_theme_options[post_image_archives]', array(
+		'label'    => esc_html__( 'Display images on blog and archives', 'gt-office' ),
+		'section'  => 'gt_office_section_blog',
+		'settings' => 'gt_office_theme_options[post_image_archives]',
+		'type'     => 'checkbox',
+		'priority' => 50,
+	) );
+
 	// Add Partial for Number of Posts setting.
 	$wp_customize->selective_refresh->add_partial( 'gt_office_blog_partial', array(
 		'selector'         => '.is-blog-page .site-content .site-main',
+		'selector'         => array(
+			'.blog .site-content .site-main',
+			'.archive .site-content .site-main',
+		),
 		'settings'         => array(
 			'gt_office_theme_options[blog_content]',
 			'gt_office_theme_options[excerpt_length]',
 			'posts_per_page',
+			'gt_office_theme_options[post_image_archives]',
 		),
 		'render_callback'  => 'gt_office_customize_blog_partial',
+		'fallback_refresh' => false,
+	) );
+
+	// Add Setting and Control for featured images on single posts.
+	$wp_customize->add_setting( 'gt_office_theme_options[post_image_single]', array(
+		'default'           => $default['post_image_single'],
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'gt_office_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'gt_office_theme_options[post_image_single]', array(
+		'label'    => esc_html__( 'Display images on single posts', 'gt-office' ),
+		'section'  => 'gt_office_section_blog',
+		'settings' => 'gt_office_theme_options[post_image_single]',
+		'type'     => 'checkbox',
+		'priority' => 60,
+	) );
+
+	$wp_customize->selective_refresh->add_partial( 'gt_office_theme_options[post_image_single]', array(
+		'selector'         => '.single-post .site-main',
+		'render_callback'  => 'gt_office_customize_partial_single_post',
 		'fallback_refresh' => false,
 	) );
 
@@ -92,7 +145,7 @@ function gt_office_customize_register_blog_settings( $wp_customize ) {
 			'label'    => esc_html__( 'Post Details', 'gt-office' ),
 			'section'  => 'gt_office_section_blog',
 			'settings' => array(),
-			'priority' => 40,
+			'priority' => 70,
 		)
 	) );
 
@@ -109,7 +162,7 @@ function gt_office_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'gt_office_section_blog',
 		'settings' => 'gt_office_theme_options[meta_date]',
 		'type'     => 'checkbox',
-		'priority' => 50,
+		'priority' => 80,
 	) );
 
 	// Add Setting and Control for showing post author.
@@ -125,7 +178,7 @@ function gt_office_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'gt_office_section_blog',
 		'settings' => 'gt_office_theme_options[meta_author]',
 		'type'     => 'checkbox',
-		'priority' => 60,
+		'priority' => 90,
 	) );
 
 	// Add Setting and Control for showing post categories.
@@ -141,7 +194,7 @@ function gt_office_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'gt_office_section_blog',
 		'settings' => 'gt_office_theme_options[meta_categories]',
 		'type'     => 'checkbox',
-		'priority' => 70,
+		'priority' => 100,
 	) );
 
 	// Add Single Post Headline.
@@ -150,7 +203,7 @@ function gt_office_customize_register_blog_settings( $wp_customize ) {
 			'label'    => esc_html__( 'Single Post', 'gt-office' ),
 			'section'  => 'gt_office_section_blog',
 			'settings' => array(),
-			'priority' => 80,
+			'priority' => 110,
 		)
 	) );
 
@@ -167,7 +220,7 @@ function gt_office_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'gt_office_section_blog',
 		'settings' => 'gt_office_theme_options[meta_tags]',
 		'type'     => 'checkbox',
-		'priority' => 90,
+		'priority' => 120,
 	) );
 }
 add_action( 'customize_register', 'gt_office_customize_register_blog_settings' );
@@ -183,4 +236,22 @@ function gt_office_customize_blog_partial() {
 	}
 
 	gt_office_pagination();
+}
+
+
+/**
+ * Render single posts partial
+ */
+function gt_office_customize_partial_single_post() {
+	while ( have_posts() ) :
+		the_post();
+
+		get_template_part( 'template-parts/post/content', 'single' );
+
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
+
+	endwhile;
 }

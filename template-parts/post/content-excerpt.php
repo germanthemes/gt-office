@@ -11,7 +11,7 @@
 
 	<header class="post-header entry-header">
 
-		<?php gt_office_post_image(); ?>
+		<?php gt_office_post_image_archives(); ?>
 
 		<?php the_title( sprintf( '<h2 class="post-title entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 

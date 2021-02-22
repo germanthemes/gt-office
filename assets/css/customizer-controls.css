@@ -22,6 +22,7 @@
 #customize-control-gt_office_theme_options-header_search_title,
 #customize-control-gt_office_theme_options-scroll_top_title,
 #customize-control-gt_office_theme_options-post_details,
+#customize-control-gt_office_theme_options-featured_images,
 #customize-control-gt_office_theme_options-single_post {
 	margin-top: 16px;
 	margin-bottom: 0;
@@ -31,6 +32,8 @@
 	margin-bottom: 24px;
 }
 
+#customize-control-gt_office_theme_options-post_image_archives,
+#customize-control-gt_office_theme_options-post_image_single,
 #customize-control-gt_office_theme_options-meta_date,
 #customize-control-gt_office_theme_options-meta_author,
 #customize-control-gt_office_theme_options-meta_categories,

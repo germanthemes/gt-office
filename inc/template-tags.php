@@ -214,30 +214,40 @@ if ( ! function_exists( 'gt_office_search_header' ) ) :
 endif;
 
 
-if ( ! function_exists( 'gt_office_post_image' ) ) :
+if ( ! function_exists( 'gt_office_post_image_archives' ) ) :
 	/**
-	 * Displays the featured image.
+	 * Displays the featured image on archive posts.
 	 */
-	function gt_office_post_image() {
-		if ( ! has_post_thumbnail() ) {
-			return;
-		}
+	function gt_office_post_image_archives( $image_size = 'post-thumbnail' ) {
 
-		if ( is_singular() ) :
-			?>
-
-			<figure class="post-image post-image-single">
-				<?php the_post_thumbnail(); ?>
-			</figure>
-
-			<?php
-		else :
+		// Display Post Thumbnail if activated.
+		if ( has_post_thumbnail() && true === gt_office_get_option( 'post_image_archives' ) ) :
 			?>
 
 			<figure class="post-image post-image-archives">
 				<a class="wp-post-image-link" href="<?php the_permalink(); ?>" rel="bookmark" aria-hidden="true">
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail( $image_size ); ?>
 				</a>
+			</figure>
+
+			<?php
+		endif;
+	}
+endif;
+
+
+if ( ! function_exists( 'gt_office_post_image_single' ) ) :
+	/**
+	 * Displays the featured image on single posts.
+	 */
+	function gt_office_post_image_single( $image_size = 'post-thumbnail' ) {
+
+		// Display Post Thumbnail if activated.
+		if ( has_post_thumbnail() && true === gt_office_get_option( 'post_image_single' ) ) :
+			?>
+
+			<figure class="post-image post-image-single">
+				<?php the_post_thumbnail( $image_size ); ?>
 			</figure>
 
 			<?php
