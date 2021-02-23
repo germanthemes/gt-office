@@ -2068,12 +2068,20 @@ body.date-hidden.categories-hidden .type-post .entry-meta .posted-by::after {
 }
 
 .more-link:hover,
-.more-link:active {
+.more-link:active,
+.more-link:focus {
 	color: #fff;
 	color: var(--button-text-hover-color);
 	background-color: #202020;
 	background-color: var(--button-hover-color);
-	text-decoration: none;
+}
+
+.more-link:focus {
+	outline: -webkit-focus-ring-color auto 1px;
+}
+
+.more-link::after {
+	content: " \00BB";
 }
 
 /* Post Navigation */
