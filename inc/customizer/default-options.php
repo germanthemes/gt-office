@@ -64,6 +64,7 @@ function gt_office_default_options() {
 		'meta_date'           => true,
 		'meta_author'         => true,
 		'meta_categories'     => true,
+		'meta_comments'       => false,
 		'meta_tags'           => false,
 		'post_navigation'     => true,
 		'primary_color'       => '#0890d0',

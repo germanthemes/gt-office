@@ -265,6 +265,7 @@ if ( ! function_exists( 'gt_office_entry_meta' ) ) :
 		$postmeta  = gt_office_entry_author();
 		$postmeta .= gt_office_entry_date();
 		$postmeta .= gt_office_entry_categories();
+		$postmeta .= gt_office_entry_comments();
 
 		echo '<div class="entry-meta">' . $postmeta . '</div>';
 	}
@@ -334,6 +335,36 @@ if ( ! function_exists( 'gt_office_entry_categories' ) ) :
 		$categories = get_the_category_list( ', ' );
 
 		return '<span class="posted-in"> ' . $categories . '</span>';
+	}
+endif;
+
+
+if ( ! function_exists( 'gt_office_entry_comments' ) ) :
+	/**
+	 * Displays the post comments
+	 */
+	function gt_office_entry_comments() {
+
+		// Check if comments are open or we have at least one comment.
+		if ( ! ( comments_open() || get_comments_number() ) ) {
+			return;
+		}
+
+		// Start Output Buffering.
+		ob_start();
+
+		// Display Comments.
+		comments_popup_link(
+			esc_html__( 'No comments', 'gt-office' ),
+			esc_html__( '1 comment', 'gt-office' ),
+			esc_html__( '% comments', 'gt-office' )
+		);
+		$comments = ob_get_contents();
+
+		// End Output Buffering.
+		ob_end_clean();
+
+		return '<span class="entry-comments"> ' . $comments . '</span>';
 	}
 endif;
 

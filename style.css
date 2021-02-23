@@ -2008,7 +2008,7 @@ body.site-description-hidden .site-header .site-description {
 		content: "\2022";
 	}
 
-	.entry-meta .posted-in::after {
+	.entry-meta .entry-comments::after {
 		margin: 0;
 		content: "";
 	}
@@ -2029,6 +2029,7 @@ body.site-description-hidden .site-header .site-description {
 body.date-hidden .type-post .entry-meta .posted-on,
 body.author-hidden .type-post .entry-meta .posted-by,
 body.categories-hidden .type-post .posted-in,
+body.comments-hidden .type-post .entry-meta .entry-comments,
 body.tags-hidden.single-post .type-post .entry-tags,
 body.post-navigation-hidden.single-post .post-navigation {
 	position: absolute;
@@ -2040,8 +2041,10 @@ body.post-navigation-hidden.single-post .post-navigation {
 
 body.author-hidden .type-post .entry-meta .posted-by::after,
 body.date-hidden .type-post .entry-meta .posted-on::after,
-body.categories-hidden .type-post .entry-meta .posted-on::after,
-body.date-hidden.categories-hidden .type-post .entry-meta .posted-by::after {
+body.categories-hidden .type-post .entry-meta .posted-in::after,
+body.comments-hidden .type-post .entry-meta .posted-in::after,
+body.categories-hidden.comments-hidden .type-post .entry-meta .posted-on::after,
+body.date-hidden.categories-hidden.comments-hidden .type-post .entry-meta .posted-by::after {
 	margin: 0;
 	content: "";
 }

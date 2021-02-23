@@ -207,6 +207,32 @@ function gt_office_customize_register_blog_settings( $wp_customize ) {
 		)
 	) );
 
+	// Add Setting and Control for showing post comments.
+	$wp_customize->add_setting( 'gt_office_theme_options[meta_comments]', array(
+		'default'           => $default['meta_comments'],
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'gt_office_sanitize_checkbox',
+	) );
+
+	$wp_customize->add_control( 'gt_office_theme_options[meta_comments]', array(
+		'label'    => esc_html__( 'Display comments', 'gt-office' ),
+		'section'  => 'gt_office_section_blog',
+		'settings' => 'gt_office_theme_options[meta_comments]',
+		'type'     => 'checkbox',
+		'priority' => 100,
+	) );
+
+	// Add Single Post Headline.
+	$wp_customize->add_control( new GT_Office_Customize_Header_Control(
+		$wp_customize, 'gt_office_theme_options[single_post]', array(
+			'label'    => esc_html__( 'Single Post', 'gt-office' ),
+			'section'  => 'gt_office_section_blog',
+			'settings' => array(),
+			'priority' => 120,
+		)
+	) );
+
 	// Add Setting and Control for showing post tags.
 	$wp_customize->add_setting( 'gt_office_theme_options[meta_tags]', array(
 		'default'           => $default['meta_tags'],
@@ -220,7 +246,7 @@ function gt_office_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'gt_office_section_blog',
 		'settings' => 'gt_office_theme_options[meta_tags]',
 		'type'     => 'checkbox',
-		'priority' => 120,
+		'priority' => 130,
 	) );
 
 	// Add Setting and Control for showing post navigation.
@@ -236,7 +262,7 @@ function gt_office_customize_register_blog_settings( $wp_customize ) {
 		'section'  => 'gt_office_section_blog',
 		'settings' => 'gt_office_theme_options[post_navigation]',
 		'type'     => 'checkbox',
-		'priority' => 130,
+		'priority' => 140,
 	) );
 }
 add_action( 'customize_register', 'gt_office_customize_register_blog_settings' );

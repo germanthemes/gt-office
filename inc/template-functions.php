@@ -56,6 +56,11 @@ function gt_office_body_classes( $classes ) {
 		$classes[] = 'categories-hidden';
 	}
 
+	// Hide Comments?
+	if ( false === $theme_options['meta_comments'] ) {
+		$classes[] = 'comments-hidden';
+	}
+
 	// Hide Tags?
 	if ( false === $theme_options['meta_tags'] ) {
 		$classes[] = 'tags-hidden';
