@@ -33,4 +33,6 @@
 	endif;
 	?>
 
+	<?php gt_office_header_search_icon(); ?>
+
 </div><!-- .site-branding -->

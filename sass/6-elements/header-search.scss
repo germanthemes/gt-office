@@ -1,9 +1,4 @@
 .header-search-enabled {
-	.header-main {
-		position: relative;
-		align-items: center;
-	}
-
 	.primary-menu-toggle {
 		order: 3;
 		margin-left: 0;
@@ -13,10 +8,10 @@
 		order: 4;
 	}
 
+	/* Style Mobile Menu Search Icon */
 	.header-search-button {
 		order: 2;
 		margin-left: auto;
-		margin-right: 0.5rem;
 		@include font-size(17);
 		@include font-family(--navi-font);
 		@include font-weight(--navi-font-weight);
@@ -24,7 +19,7 @@
 
 		.header-search-icon {
 			margin: 0;
-			padding: 1rem 0.5rem;
+			padding: 1rem;
 			@include color(--header-text-color);
 			background: none;
 			border: none;
@@ -57,30 +52,25 @@
 		margin: 0;
 		box-sizing: border-box;
 		z-index: 999;
+		padding-bottom: 1.5rem;
+		border-bottom: 1px solid;
+		@include border-color(--header-border-color);
+		@include background(--header-color);
 
 		.header-search-form {
 			display: flex;
-			padding: 1.5rem;
-			border-top: 1px solid;
-			@include border-color(--header-border-color);
-			@include background(--header-color);
 
 			.search-form {
 				flex-grow: 1;
-
-				.search-field {
-					background: #fff;
-					border: none;
-				}
-
-				.search-submit {
-					@include background(--header-text-color);
-
-					.icon-search {
-						@include fill(--header-color);
-					}
-				}
 			}
+		}
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	.header-search-enabled {
+		.header-search-dropdown {
+			padding-bottom: 2rem;
 		}
 	}
 }
@@ -91,38 +81,26 @@
 			order: 2;
 		}
 
+		/* Style Desktop Menu Search Icon */
 		.header-search-button {
 			order: 3;
-			margin-left: 1rem;
+			margin-left: 1.5rem;
 
 			.header-search-icon {
+				padding: 0.75rem;
+
 				.icon-search {
-					margin: 4px 0 0;
-					width: 20px;
-					height: 20px;
-					vertical-align: top;
+					margin: 0;
+					padding: 0;
+					width: 26px;
+					height: 26px;
+					vertical-align: middle;
 				}
 			}
 		}
 
 		.header-search-dropdown {
-			position: absolute;
-			margin-top: -1.5rem;
-			width: 100%;
-			max-width: $themeWidth;
-
-			.header-search-main {
-				display: flex;
-				justify-content: flex-end;
-				margin-right: 1.5rem;
-
-				.header-search-form {
-					max-width: 450px;
-					flex-grow: 1;
-					border: 1px solid;
-					@include border-color(--header-border-color);
-				}
-			}
+			margin-top: -2rem;
 		}
 	}
 }

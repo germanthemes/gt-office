@@ -831,6 +831,7 @@ textarea {
 .site-branding {
 	display: flex;
 	align-items: center;
+	flex-grow: 1;
 }
 
 /* Site Logo */
@@ -1573,9 +1574,8 @@ body.site-description-hidden .site-header .site-description {
 /*--------------------------------------------------------------
 # - Header Search Feature
 --------------------------------------------------------------*/
-.header-search-enabled .header-main {
-	position: relative;
-	align-items: center;
+.header-search-enabled {
+	/* Style Mobile Menu Search Icon */
 }
 
 .header-search-enabled .primary-menu-toggle {
@@ -1590,7 +1590,6 @@ body.site-description-hidden .site-header .site-description {
 .header-search-enabled .header-search-button {
 	order: 2;
 	margin-left: auto;
-	margin-right: 0.5rem;
 	font-size: 17px;
 	font-size: 1.0625rem;
 	font-family: "Barlow", arial, helvetica, sans-serif;
@@ -1603,7 +1602,7 @@ body.site-description-hidden .site-header .site-description {
 
 .header-search-enabled .header-search-button .header-search-icon {
 	margin: 0;
-	padding: 1rem 0.5rem;
+	padding: 1rem;
 	color: #202020;
 	color: var(--header-text-color);
 	background: none;
@@ -1637,73 +1636,56 @@ body.site-description-hidden .site-header .site-description {
 	margin: 0;
 	box-sizing: border-box;
 	z-index: 999;
-}
-
-.header-search-enabled .header-search-dropdown .header-search-form {
-	display: flex;
-	padding: 1.5rem;
-	border-top: 1px solid;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid;
 	border-color: rgba(0, 0, 0, 0.1);
 	border-color: var(--header-border-color);
 	background-color: #fff;
 	background-color: var(--header-color);
 }
 
+.header-search-enabled .header-search-dropdown .header-search-form {
+	display: flex;
+}
+
 .header-search-enabled .header-search-dropdown .header-search-form .search-form {
 	flex-grow: 1;
 }
 
-.header-search-enabled .header-search-dropdown .header-search-form .search-form .search-field {
-	background: #fff;
-	border: none;
-}
-
-.header-search-enabled .header-search-dropdown .header-search-form .search-form .search-submit {
-	background-color: #202020;
-	background-color: var(--header-text-color);
-}
-
-.header-search-enabled .header-search-dropdown .header-search-form .search-form .search-submit .icon-search {
-	fill: #fff;
-	fill: var(--header-color);
+@media only screen and (min-width: 640px) {
+	.header-search-enabled .header-search-dropdown {
+		padding-bottom: 2rem;
+	}
 }
 
 @media only screen and (min-width: 960px) {
+	.header-search-enabled.primary-navigation-active {
+		/* Style Desktop Menu Search Icon */
+	}
+
 	.header-search-enabled.primary-navigation-active .primary-navigation {
 		order: 2;
 	}
 
 	.header-search-enabled.primary-navigation-active .header-search-button {
 		order: 3;
-		margin-left: 1rem;
+		margin-left: 1.5rem;
+	}
+
+	.header-search-enabled.primary-navigation-active .header-search-button .header-search-icon {
+		padding: 0.75rem;
 	}
 
 	.header-search-enabled.primary-navigation-active .header-search-button .header-search-icon .icon-search {
-		margin: 4px 0 0;
-		width: 20px;
-		height: 20px;
-		vertical-align: top;
+		margin: 0;
+		padding: 0;
+		width: 26px;
+		height: 26px;
+		vertical-align: middle;
 	}
 
 	.header-search-enabled.primary-navigation-active .header-search-dropdown {
-		position: absolute;
-		margin-top: -1.5rem;
-		width: 100%;
-		max-width: 1360px;
-	}
-
-	.header-search-enabled.primary-navigation-active .header-search-dropdown .header-search-main {
-		display: flex;
-		justify-content: flex-end;
-		margin-right: 1.5rem;
-	}
-
-	.header-search-enabled.primary-navigation-active .header-search-dropdown .header-search-main .header-search-form {
-		max-width: 450px;
-		flex-grow: 1;
-		border: 1px solid;
-		border-color: rgba(0, 0, 0, 0.1);
-		border-color: var(--header-border-color);
+		margin-top: -2rem;
 	}
 }
 
@@ -3427,6 +3409,12 @@ p.has-background {
 	}
 }
 
+@media only screen and (min-width: 640px) {
+	.main-navigation > ul {
+		margin-top: 2rem;
+	}
+}
+
 @media only screen and (min-width: 960px) {
 	.primary-menu-toggle,
 	.main-navigation .dropdown-toggle {
@@ -3440,7 +3428,6 @@ p.has-background {
 
 	.primary-navigation {
 		display: flex;
-		flex-direction: column;
 		align-items: initial;
 		margin: 2.5rem 0 0;
 		padding: 0;

@@ -5,6 +5,12 @@
 	}
 }
 
+@media only screen and (min-width: 640px) {
+	.main-navigation > ul {
+		margin-top: 2rem;
+	}
+}
+
 @media only screen and (min-width: 960px) {
 	.primary-menu-toggle,
 	.main-navigation .dropdown-toggle {
@@ -18,7 +24,6 @@
 
 	.primary-navigation {
 		display: flex;
-		flex-direction: column;
 		align-items: initial;
 		margin: 2.5rem 0 0;
 		padding: 0;
