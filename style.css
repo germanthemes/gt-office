@@ -1633,7 +1633,7 @@ body.site-description-hidden .site-header .site-description {
 
 .header-search-enabled .header-search-dropdown {
 	display: none;
-	margin: 0;
+	margin: 0 0 1.5rem;
 	box-sizing: border-box;
 	z-index: 999;
 	padding-bottom: 1.5rem;
@@ -1654,6 +1654,7 @@ body.site-description-hidden .site-header .site-description {
 
 @media only screen and (min-width: 640px) {
 	.header-search-enabled .header-search-dropdown {
+		margin-bottom: 2rem;
 		padding-bottom: 2rem;
 	}
 }
@@ -1684,6 +1685,13 @@ body.site-description-hidden .site-header .site-description {
 		vertical-align: middle;
 	}
 
+	.header-search-enabled.primary-navigation-active .header-search-dropdown {
+		margin-top: -1.5rem;
+		border: none;
+	}
+}
+
+@media only screen and (min-width: 1120px) {
 	.header-search-enabled.primary-navigation-active .header-search-dropdown {
 		margin-top: -2rem;
 	}
