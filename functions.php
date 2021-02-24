@@ -6,9 +6,9 @@
  */
 
 /**
- * GT Office only works in WordPress 5.3 or later.
+ * GT Office only works in WordPress 5.5 or later.
  */
-if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
+if ( version_compare( $GLOBALS['wp_version'], '5.5', '<' ) ) {
 	require get_template_directory() . '/inc/admin/back-compat.php';
 	return;
 }
