@@ -17,7 +17,7 @@ class GT_Office_License_Key {
 	static function setup() {
 
 		// Define Product ID.
-		define( 'GT_OFFICE_PRODUCT_ID', 2533 );
+		define( 'GT_OFFICE_PRODUCT_ID', 2712 );
 
 		// Define Update API URL.
 		define( 'GT_OFFICE_STORE_API_URL', 'https://germanthemes.de' );
