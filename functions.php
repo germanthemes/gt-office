@@ -39,7 +39,7 @@ function gt_office_setup() {
 	set_post_thumbnail_size( 1600, 900, true );
 
 	// Add image size for header image on single posts and pages.
-	add_image_size( 'gt-office-header-image', 9999, 640, true );
+	add_image_size( 'gt-office-header-image', 2400, 900, true );
 
 	// Register Navigation Menus.
 	register_nav_menus( array(
@@ -69,8 +69,9 @@ function gt_office_setup() {
 	// Set up the WordPress core custom header feature.
 	add_theme_support( 'custom-header', apply_filters( 'gt_office_custom_header_args', array(
 		'header-text' => false,
-		'width'       => 9999,
-		'height'      => 640,
+		'width'       => 2400,
+		'height'      => 900,
+		'flex-height' => true,
 	) ) );
 
 	// Set up the WordPress core custom background feature.

@@ -40,6 +40,10 @@
 		margin-bottom: 2rem;
 	}
 
+	.header-image {
+		margin-bottom: 2rem;
+	}
+
 	.type-post,
 	.type-page,
 	.type-attachment,
@@ -103,6 +107,10 @@
 		padding-top: 2.5rem;
 		padding-bottom: 2.5rem;
 	}
+
+	.header-image {
+		margin-bottom: 2.5rem;
+	}
 }
 
 @media only screen and (min-width: 1280px) {
@@ -115,6 +123,10 @@
 	.header-main {
 		padding-top: 3rem;
 		padding-bottom: 3rem;
+	}
+
+	.header-image {
+		margin-bottom: 3rem;
 	}
 
 	.type-post,

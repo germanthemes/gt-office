@@ -42,12 +42,12 @@
 
 			<?php gt_office_header_search_form(); ?>
 
+			<?php gt_office_header_image(); ?>
+
 		</header><!-- #masthead -->
 
 		<?php gt_office_widget_area( 'after-header' ); ?>
 		<?php do_action( 'gt_office_after_header' ); ?>
-
-		<?php gt_office_header_image(); ?>
 
 		<div id="content" class="site-content">
 

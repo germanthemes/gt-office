@@ -911,7 +911,7 @@ textarea {
 
 /* Custom Header Image */
 .header-image {
-	margin-top: -1px;
+	margin: 0 0 1.5rem;
 }
 
 .header-image img,
@@ -3309,6 +3309,10 @@ p.has-background {
 		margin-bottom: 2rem;
 	}
 
+	.header-image {
+		margin-bottom: 2rem;
+	}
+
 	.type-post,
 	.type-page,
 	.type-attachment,
@@ -3372,6 +3376,10 @@ p.has-background {
 		padding-top: 2.5rem;
 		padding-bottom: 2.5rem;
 	}
+
+	.header-image {
+		margin-bottom: 2.5rem;
+	}
 }
 
 @media only screen and (min-width: 1280px) {
@@ -3384,6 +3392,10 @@ p.has-background {
 	.header-main {
 		padding-top: 3rem;
 		padding-bottom: 3rem;
+	}
+
+	.header-image {
+		margin-bottom: 3rem;
 	}
 
 	.type-post,
