@@ -83,7 +83,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--header-border-color: rgba(0, 0, 0, 0.1);
 	--title-color: #202020;
 	--title-hover-color: #0068a0;
+	--site-title-color: #202020;
+	--site-title-hover-color: #0068a0;
 	--widget-title-color: #202020;
+	--widget-title-hover-color: #0068a0;
 	--footer-background-color: #202020;
 	--footer-text-color: rgba(255, 255, 255, 0.5);
 	--footer-link-color: rgba(255, 255, 255, 0.95);
@@ -869,7 +872,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	color: #202020;
-	color: var(--header-text-color);
+	color: var(--site-title-color);
 	text-decoration: none;
 	font-size: 24px;
 	font-size: 1.5rem;
@@ -886,14 +889,14 @@ textarea {
 .site-title a:link,
 .site-title a:visited {
 	color: #202020;
-	color: var(--header-text-color);
+	color: var(--site-title-color);
 	transition: all 0.15s ease;
 }
 
 .site-title a:hover,
 .site-title a:active {
 	color: #0068a0;
-	color: var(--header-hover-color);
+	color: var(--site-title-hover-color);
 }
 
 .site-description {
@@ -1287,7 +1290,7 @@ body.site-description-hidden .site-header .site-description {
 	background-color: var(--header-bar-color);
 	border-bottom: 1px solid;
 	border-color: rgba(0, 0, 0, 0.1);
-	border-color: var(--header-border-color);
+	border-color: var(--header-bar-border-color);
 }
 
 .header-bar-main {
@@ -1371,12 +1374,6 @@ body.site-description-hidden .site-header .site-description {
 	list-style: none;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: "Barlow", arial, helvetica, sans-serif;
-	font-family: var(--navi-font);
-	font-weight: normal;
-	font-weight: var(--navi-font-weight);
-	text-transform: none;
-	text-transform: var(--navi-text-transform);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */
@@ -1463,12 +1460,6 @@ body.site-description-hidden .site-header .site-description {
 	text-decoration: none;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-family: "Barlow", arial, helvetica, sans-serif;
-	font-family: var(--navi-font);
-	font-weight: normal;
-	font-weight: var(--navi-font-weight);
-	text-transform: none;
-	text-transform: var(--navi-text-transform);
 	text-align: left;
 	transition: all 0.15s ease;
 }

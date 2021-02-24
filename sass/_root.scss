@@ -43,7 +43,10 @@
 	// Titles
 	@include variable(--title-color, $themeColors);
 	@include variable(--title-hover-color, $themeColors);
+	@include variable(--site-title-color, $themeColors);
+	@include variable(--site-title-hover-color, $themeColors);
 	@include variable(--widget-title-color, $themeColors);
+	@include variable(--widget-title-hover-color, $themeColors);
 
 	// Footer
 	@include variable(--footer-background-color, $themeColors);

@@ -22,39 +22,55 @@ function gt_office_customize_register_theme_color_settings( $wp_customize ) {
 	// Get Default Colors from settings.
 	$default = gt_office_default_options();
 
-	// Add Header Background Color setting.
-	$wp_customize->add_setting( 'gt_office_theme_options[header_color]', array(
-		'default'           => $default['header_color'],
+	// Add Header Bar Background Color setting.
+	$wp_customize->add_setting( 'gt_office_theme_options[header_bar_color]', array(
+		'default'           => $default['header_bar_color'],
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize, 'gt_office_theme_options[header_color]', array(
-			'label'    => esc_html_x( 'Header Background', 'Color Option', 'gt-office' ),
+		$wp_customize, 'gt_office_theme_options[header_bar_color]', array(
+			'label'    => esc_html_x( 'Header Bar Background', 'Color Option', 'gt-office' ),
 			'section'  => 'gt_office_section_theme_colors',
-			'settings' => 'gt_office_theme_options[header_color]',
+			'settings' => 'gt_office_theme_options[header_bar_color]',
 			'priority' => 10,
 		)
 	) );
 
-	// Add Header Text Color setting.
-	$wp_customize->add_setting( 'gt_office_theme_options[header_text_color]', array(
-		'default'           => $default['header_text_color'],
+	// Add Header Bar Hover Color setting.
+	$wp_customize->add_setting( 'gt_office_theme_options[header_bar_hover_color]', array(
+		'default'           => $default['header_bar_hover_color'],
 		'type'              => 'option',
 		'transport'         => 'postMessage',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize, 'gt_office_theme_options[header_text_color]', array(
-			'label'    => esc_html_x( 'Header Text', 'Color Option', 'gt-office' ),
+		$wp_customize, 'gt_office_theme_options[header_bar_hover_color]', array(
+			'label'    => esc_html_x( 'Header Bar Hover', 'Color Option', 'gt-office' ),
 			'section'  => 'gt_office_section_theme_colors',
-			'settings' => 'gt_office_theme_options[header_text_color]',
+			'settings' => 'gt_office_theme_options[header_bar_hover_color]',
 			'priority' => 20,
 		)
 	) );
 
-	// Add Header Hover Color setting.
+	// Add Page Background Color setting.
+	$wp_customize->add_setting( 'gt_office_theme_options[page_background_color]', array(
+		'default'           => $default['page_background_color'],
+		'type'              => 'option',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize, 'gt_office_theme_options[page_background_color]', array(
+			'label'    => esc_html_x( 'Page Background', 'Color Option', 'gt-office' ),
+			'section'  => 'gt_office_section_theme_colors',
+			'settings' => 'gt_office_theme_options[page_background_color]',
+			'priority' => 30,
+		)
+	) );
+
+	// Add Header Bar Hover Color setting.
 	$wp_customize->add_setting( 'gt_office_theme_options[header_hover_color]', array(
 		'default'           => $default['header_hover_color'],
 		'type'              => 'option',
@@ -63,10 +79,10 @@ function gt_office_customize_register_theme_color_settings( $wp_customize ) {
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'gt_office_theme_options[header_hover_color]', array(
-			'label'    => esc_html_x( 'Header Hover', 'Color Option', 'gt-office' ),
+			'label'    => esc_html_x( 'Header Link Hover', 'Color Option', 'gt-office' ),
 			'section'  => 'gt_office_section_theme_colors',
 			'settings' => 'gt_office_theme_options[header_hover_color]',
-			'priority' => 30,
+			'priority' => 40,
 		)
 	) );
 
@@ -82,7 +98,7 @@ function gt_office_customize_register_theme_color_settings( $wp_customize ) {
 			'label'    => esc_html_x( 'Titles', 'Color Option', 'gt-office' ),
 			'section'  => 'gt_office_section_theme_colors',
 			'settings' => 'gt_office_theme_options[title_color]',
-			'priority' => 40,
+			'priority' => 50,
 		)
 	) );
 
@@ -98,7 +114,7 @@ function gt_office_customize_register_theme_color_settings( $wp_customize ) {
 			'label'    => esc_html_x( 'Title Hover', 'Color Option', 'gt-office' ),
 			'section'  => 'gt_office_section_theme_colors',
 			'settings' => 'gt_office_theme_options[title_hover_color]',
-			'priority' => 50,
+			'priority' => 60,
 		)
 	) );
 

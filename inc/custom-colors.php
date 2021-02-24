@@ -91,37 +91,59 @@ class GT_Office_Custom_Colors {
 			$color_variables .= '--dark-gray-color: ' . $theme_options['dark_gray_color'] . ';';
 		}
 
-		// Set Header Color.
-		if ( $theme_options['header_color'] !== $default['header_color'] ) {
-			$color_variables .= '--header-color: ' . $theme_options['header_color'] . ';';
-			$color_variables .= '--header-bar-color: ' . $theme_options['header_color'] . ';';
+		// Set Header Bar Color.
+		if ( $theme_options['header_bar_color'] !== $default['header_bar_color'] ) {
+			$color_variables .= '--header-bar-color: ' . $theme_options['header_bar_color'] . ';';
 
-			// Check if a light background color was chosen.
-			if ( self::is_color_light( $theme_options['header_color'] ) ) {
-				$color_variables .= '--header-border-color: rgba(0, 0, 0, 0.1);';
+			// Check if a dark background color was chosen.
+			if ( self::is_color_dark( $theme_options['header_bar_color'] ) ) {
+				$color_variables .= '--header-bar-text-color: #fff;';
+				$color_variables .= '--header-bar-border-color: rgba(255, 255, 255, 0.1);';
 			}
 		}
 
-		// Set Header Text Color.
-		if ( $theme_options['header_text_color'] !== $default['header_text_color'] ) {
-			$color_variables .= '--header-text-color: ' . $theme_options['header_text_color'] . ';';
-			$color_variables .= '--header-bar-text-color: ' . $theme_options['header_text_color'] . ';';
+		// Set Header Bar Hover Color.
+		if ( $theme_options['header_bar_hover_color'] !== $default['header_bar_hover_color'] ) {
+			$color_variables .= '--header-bar-hover-color: ' . $theme_options['header_bar_hover_color'] . ';';
+		}
+
+		// Set Page Background Color.
+		if ( $theme_options['page_background_color'] !== $default['page_background_color'] ) {
+			$color_variables .= '--page-background-color: ' . $theme_options['page_background_color'] . ';';
+			$color_variables .= '--header-color: ' . $theme_options['page_background_color'] . ';';
+
+			// Check if a dark background color was chosen.
+			if ( self::is_color_dark( $theme_options['page_background_color'] ) ) {
+				$color_variables .= '--text-color: #fff;';
+				$color_variables .= '--light-text-color: rgba(255, 255, 255, 0.5);';
+				$color_variables .= '--medium-text-color: rgba(255, 255, 255, 0.7);';
+				$color_variables .= '--page-border-color: rgba(255, 255, 255, 0.1);';
+				$color_variables .= '--light-background-color: rgba(255, 255, 255, 0.05);';
+				$color_variables .= '--medium-background-color: rgba(255, 255, 255, 0.15);';
+				$color_variables .= '--light-border-color : rgba(255, 255, 255, 0.1);';
+				$color_variables .= '--medium-border-color: rgba(255, 255, 255, 0.3);';
+				$color_variables .= '--header-text-color: #fff;';
+				$color_variables .= '--header-border-color: rgba(255, 255, 255, 0.1);';
+			}
 		}
 
 		// Set Header Hover Color.
 		if ( $theme_options['header_hover_color'] !== $default['header_hover_color'] ) {
 			$color_variables .= '--header-hover-color: ' . $theme_options['header_hover_color'] . ';';
-			$color_variables .= '--header-bar-hover-color: ' . $theme_options['header_hover_color'] . ';';
 		}
 
 		// Set Title Color.
 		if ( $theme_options['title_color'] !== $default['title_color'] ) {
 			$color_variables .= '--title-color: ' . $theme_options['title_color'] . ';';
+			$color_variables .= '--site-title-color: ' . $theme_options['title_color'] . ';';
+			$color_variables .= '--widget-title-color: ' . $theme_options['title_color'] . ';';
 		}
 
 		// Set Title Hover Color.
 		if ( $theme_options['title_hover_color'] !== $default['title_hover_color'] ) {
 			$color_variables .= '--title-hover-color: ' . $theme_options['title_hover_color'] . ';';
+			$color_variables .= '--site-title-hover-color: ' . $theme_options['title_hover_color'] . ';';
+			$color_variables .= '--widget-title-hover-color: ' . $theme_options['title_hover_color'] . ';';
 		}
 
 		// Set Link Color.

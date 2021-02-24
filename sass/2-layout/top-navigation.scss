@@ -10,9 +10,6 @@
 	@include color(--header-bar-text-color);
 	list-style: none;
 	@include font-size(14);
-	@include font-family(--navi-font);
-	@include font-weight(--navi-font-weight);
-	@include text-transform(--navi-text-transform);
 }
 
 /* Hide the menu on small screens when JavaScript is available. */
@@ -93,9 +90,6 @@
 	@include color(--header-bar-text-color);
 	text-decoration: none;
 	@include font-size(14);
-	@include font-family(--navi-font);
-	@include font-weight(--navi-font-weight);
-	@include text-transform(--navi-text-transform);
 	text-align: left;
 	transition: all 0.15s ease;
 }

@@ -3,7 +3,7 @@
 	@include color(--header-bar-text-color);
 	@include background(--header-bar-color);
 	border-bottom: 1px solid;
-	@include border-color(--header-border-color);
+	@include border-color(--header-bar-border-color);
 }
 
 .header-bar-main {
