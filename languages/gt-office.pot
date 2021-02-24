@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GT Office\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2021-02-16 15:49+0100\n"
+"POT-Creation-Date: 2021-02-24 14:35+0100\n"
 "PO-Revision-Date: 2016-09-15 21:02+0100\n"
 "Last-Translator: \n"
 "Language-Team: GermanThemes <support@germanthemes.de>\n"
@@ -49,140 +49,144 @@ msgid "Main Navigation"
 msgstr ""
 
 #: functions.php:47
-msgid "Footer Navigation"
+msgid "Top Navigation"
 msgstr ""
 
 #: functions.php:48
-msgid "Social Icons (Header)"
+msgid "Footer Navigation"
 msgstr ""
 
 #: functions.php:49
+msgid "Social Icons (Header)"
+msgstr ""
+
+#: functions.php:50
 msgid "Social Icons (Footer)"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:116
 msgid "Expand child menu"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:117
 msgid "Collapse child menu"
 msgstr ""
 
-#: functions.php:190
+#: functions.php:192
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:192
+#: functions.php:194
 msgctxt "widget area description"
 msgid "Appears on blog pages and single posts."
 msgstr ""
 
-#: functions.php:201
+#: functions.php:203
 msgid "Before Header"
 msgstr ""
 
-#: functions.php:203
+#: functions.php:205
 msgctxt "widget area description"
 msgid "Appears above the header area."
 msgstr ""
 
-#: functions.php:212
+#: functions.php:214
 msgid "After Header"
 msgstr ""
 
-#: functions.php:214
+#: functions.php:216
 msgctxt "widget area description"
 msgid "Appears below the header area."
 msgstr ""
 
-#: functions.php:223
+#: functions.php:225
 msgid "Before Content"
 msgstr ""
 
-#: functions.php:225
+#: functions.php:227
 msgctxt "widget area description"
 msgid "Appears above the content area."
 msgstr ""
 
-#: functions.php:234
+#: functions.php:236
 msgid "After Single Posts"
 msgstr ""
 
-#: functions.php:236
+#: functions.php:238
 msgctxt "widget area description"
 msgid "Appears below single posts."
 msgstr ""
 
-#: functions.php:245
+#: functions.php:247
 msgid "After Pages"
 msgstr ""
 
-#: functions.php:247
+#: functions.php:249
 msgctxt "widget area description"
 msgid "Appears below static pages."
 msgstr ""
 
-#: functions.php:256
+#: functions.php:258
 msgid "Before Footer"
 msgstr ""
 
-#: functions.php:258
+#: functions.php:260
 msgctxt "widget area description"
 msgid "Appears above the footer area."
 msgstr ""
 
-#: functions.php:267
+#: functions.php:269
 msgid "Footer Column 1"
 msgstr ""
 
-#: functions.php:269
+#: functions.php:271
 msgctxt "widget area description"
 msgid "Appears in the first column in footer."
 msgstr ""
 
-#: functions.php:278
+#: functions.php:280
 msgid "Footer Column 2"
 msgstr ""
 
-#: functions.php:280
+#: functions.php:282
 msgctxt "widget area description"
 msgid "Appears in the second column in footer."
 msgstr ""
 
-#: functions.php:289
+#: functions.php:291
 msgid "Footer Column 3"
 msgstr ""
 
-#: functions.php:291
+#: functions.php:293
 msgctxt "widget area description"
 msgid "Appears in the third column in footer."
 msgstr ""
 
-#: functions.php:300
+#: functions.php:302
 msgid "Footer Column 4"
 msgstr ""
 
-#: functions.php:302
+#: functions.php:304
 msgctxt "widget area description"
 msgid "Appears in the fourth column in footer."
 msgstr ""
 
-#: functions.php:311
+#: functions.php:313
 msgid "Footer Copyright"
 msgstr ""
 
-#: functions.php:313
+#: functions.php:315
 msgctxt "widget area description"
 msgid "Appears in the bottom footer line."
 msgstr ""
 
-#: functions.php:343
+#: functions.php:345
 msgid ""
 "Updating this theme will lose any customizations you have made. 'Cancel' to "
 "stop, 'OK' to update."
 msgstr ""
 
-#: functions.php:344
+#: functions.php:346
 #, php-format
 msgid ""
 "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
@@ -338,31 +342,68 @@ msgid "Blog Settings"
 msgstr ""
 
 #: inc/customizer/sections/blog-settings.php:34
+msgid "Blog Content"
+msgstr ""
+
+#: inc/customizer/sections/blog-settings.php:40
+msgid "Full post"
+msgstr ""
+
+#: inc/customizer/sections/blog-settings.php:41
+msgid "Post excerpt"
+msgstr ""
+
+#: inc/customizer/sections/blog-settings.php:54
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/customizer/sections/blog-settings.php:70
 msgid "Number of Posts"
 msgstr ""
 
-#: inc/customizer/sections/blog-settings.php:52
+#: inc/customizer/sections/blog-settings.php:80
+msgid "Featured Images"
+msgstr ""
+
+#: inc/customizer/sections/blog-settings.php:96
+msgid "Display images on blog and archives"
+msgstr ""
+
+#: inc/customizer/sections/blog-settings.php:129
+msgid "Display images on single posts"
+msgstr ""
+
+#: inc/customizer/sections/blog-settings.php:145
 msgid "Post Details"
 msgstr ""
 
-#: inc/customizer/sections/blog-settings.php:68
+#: inc/customizer/sections/blog-settings.php:161
 msgid "Display date"
 msgstr ""
 
-#: inc/customizer/sections/blog-settings.php:84
+#: inc/customizer/sections/blog-settings.php:177
 msgid "Display author"
 msgstr ""
 
-#: inc/customizer/sections/blog-settings.php:100
+#: inc/customizer/sections/blog-settings.php:193
 msgid "Display categories"
 msgstr ""
 
-#: inc/customizer/sections/blog-settings.php:110
+#: inc/customizer/sections/blog-settings.php:203
+#: inc/customizer/sections/blog-settings.php:229
 msgid "Single Post"
 msgstr ""
 
-#: inc/customizer/sections/blog-settings.php:126
+#: inc/customizer/sections/blog-settings.php:219
+msgid "Display comments"
+msgstr ""
+
+#: inc/customizer/sections/blog-settings.php:245
 msgid "Display tags"
+msgstr ""
+
+#: inc/customizer/sections/blog-settings.php:261
+msgid "Display previous/next post navigation"
 msgstr ""
 
 #: inc/customizer/sections/layout-settings.php:17
@@ -417,50 +458,55 @@ msgstr ""
 
 #: inc/customizer/sections/theme-color-settings.php:34
 msgctxt "Color Option"
-msgid "Header Background"
+msgid "Header Bar Background"
 msgstr ""
 
 #: inc/customizer/sections/theme-color-settings.php:50
 msgctxt "Color Option"
-msgid "Header Text"
+msgid "Header Bar Hover"
 msgstr ""
 
 #: inc/customizer/sections/theme-color-settings.php:66
 msgctxt "Color Option"
-msgid "Header Hover"
+msgid "Page Background"
 msgstr ""
 
 #: inc/customizer/sections/theme-color-settings.php:82
 msgctxt "Color Option"
-msgid "Titles"
+msgid "Header Link Hover"
 msgstr ""
 
 #: inc/customizer/sections/theme-color-settings.php:98
 msgctxt "Color Option"
-msgid "Title Hover"
+msgid "Titles"
 msgstr ""
 
 #: inc/customizer/sections/theme-color-settings.php:114
 msgctxt "Color Option"
-msgid "Links"
+msgid "Title Hover"
 msgstr ""
 
 #: inc/customizer/sections/theme-color-settings.php:130
 msgctxt "Color Option"
-msgid "Link Hover"
+msgid "Links"
 msgstr ""
 
 #: inc/customizer/sections/theme-color-settings.php:146
 msgctxt "Color Option"
-msgid "Buttons"
+msgid "Link Hover"
 msgstr ""
 
 #: inc/customizer/sections/theme-color-settings.php:162
 msgctxt "Color Option"
-msgid "Button Hover"
+msgid "Buttons"
 msgstr ""
 
 #: inc/customizer/sections/theme-color-settings.php:178
+msgctxt "Color Option"
+msgid "Button Hover"
+msgstr ""
+
+#: inc/customizer/sections/theme-color-settings.php:194
 msgctxt "Color Option"
 msgid "Footer"
 msgstr ""
@@ -633,48 +679,63 @@ msgstr ""
 msgid "Projects"
 msgstr ""
 
-#: inc/template-tags.php:98
+#: inc/template-tags.php:116
 msgid "Search"
 msgstr ""
 
-#: inc/template-tags.php:187
+#: inc/template-tags.php:205
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: inc/template-tags.php:266
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr ""
-
-#: inc/template-tags.php:284
+#: inc/template-tags.php:309
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:290
+#: inc/template-tags.php:315
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: inc/template-tags.php:312
-#, php-format
-msgctxt "post category"
-msgid "in %s"
+#: inc/template-tags.php:358
+msgid "No comments"
 msgstr ""
 
-#: inc/template-tags.php:327
+#: inc/template-tags.php:359
+msgid "1 comment"
+msgstr ""
+
+#: inc/template-tags.php:360
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: inc/template-tags.php:378
 msgid "Tags: "
 msgstr ""
 
-#: inc/template-tags.php:345
+#: inc/template-tags.php:395 template-parts/post/content.php:24
+msgid "Continue reading"
+msgstr ""
+
+#: inc/template-tags.php:411
+msgctxt "post navigation"
+msgid "Previous Post"
+msgstr ""
+
+#: inc/template-tags.php:412
+msgctxt "post navigation"
+msgid "Next Post"
+msgstr ""
+
+#: inc/template-tags.php:428
 msgctxt "pagination"
 msgid "Previous Posts"
 msgstr ""
 
-#: inc/template-tags.php:346
+#: inc/template-tags.php:429
 msgctxt "pagination"
 msgid "Next Posts"
 msgstr ""
@@ -695,12 +756,17 @@ msgid "Search"
 msgstr ""
 
 #: template-parts/footer/footer-menus.php:19
-#: template-parts/header/site-navigation.php:24
+#: template-parts/header/site-navigation.php:22
 msgid "Primary Menu"
 msgstr ""
 
+#: template-parts/header/header-bar.php:61
 #: template-parts/header/site-navigation.php:17
 msgid "Menu"
+msgstr ""
+
+#: template-parts/header/header-bar.php:66
+msgid "Secondary Menu"
 msgstr ""
 
 #: template-parts/page/content-none.php:14
@@ -723,8 +789,4 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
-
-#: template-parts/post/content.php:24
-msgid "Continue reading"
 msgstr ""

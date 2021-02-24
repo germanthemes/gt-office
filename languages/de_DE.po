@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GT Office\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2021-02-16 15:49+0100\n"
-"PO-Revision-Date: 2021-02-16 15:49+0100\n"
+"POT-Creation-Date: 2021-02-24 14:35+0100\n"
+"PO-Revision-Date: 2021-02-24 14:37+0100\n"
 "Last-Translator: \n"
 "Language-Team: GermanThemes <support@germanthemes.de>\n"
 "Language: de_DE\n"
@@ -49,134 +49,138 @@ msgid "Main Navigation"
 msgstr "Hauptnavigation"
 
 #: functions.php:47
+msgid "Top Navigation"
+msgstr "Obere Navigation"
+
+#: functions.php:48
 msgid "Footer Navigation"
 msgstr "Footer Navigation"
 
-#: functions.php:48
+#: functions.php:49
 msgid "Social Icons (Header)"
 msgstr "Social Icons (Header)"
 
-#: functions.php:49
+#: functions.php:50
 msgid "Social Icons (Footer)"
 msgstr "Social Icons (Footer)"
 
-#: functions.php:114
+#: functions.php:116
 msgid "Expand child menu"
 msgstr "Untermenü öffnen"
 
-#: functions.php:115
+#: functions.php:117
 msgid "Collapse child menu"
 msgstr "Untermenü schließen"
 
-#: functions.php:190
+#: functions.php:192
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:192
+#: functions.php:194
 msgctxt "widget area description"
 msgid "Appears on blog pages and single posts."
 msgstr "Erscheint auf Blog-Seiten und einzelnen Beiträgen."
 
-#: functions.php:201
+#: functions.php:203
 msgid "Before Header"
 msgstr "Vor dem Header"
 
-#: functions.php:203
+#: functions.php:205
 msgctxt "widget area description"
 msgid "Appears above the header area."
 msgstr "Erscheint über dem Header-Bereich."
 
-#: functions.php:212
+#: functions.php:214
 msgid "After Header"
 msgstr "Nach dem Header"
 
-#: functions.php:214
+#: functions.php:216
 msgctxt "widget area description"
 msgid "Appears below the header area."
 msgstr "Erscheint unter dem Header-Bereich."
 
-#: functions.php:223
+#: functions.php:225
 msgid "Before Content"
 msgstr "Vor dem Inhalt"
 
-#: functions.php:225
+#: functions.php:227
 msgctxt "widget area description"
 msgid "Appears above the content area."
 msgstr "Erscheint über dem Content-Bereich."
 
-#: functions.php:234
+#: functions.php:236
 msgid "After Single Posts"
 msgstr "Nach einzelnen Beiträgen"
 
-#: functions.php:236
+#: functions.php:238
 msgctxt "widget area description"
 msgid "Appears below single posts."
 msgstr "Erscheint unter einzelnen Beiträgen."
 
-#: functions.php:245
+#: functions.php:247
 msgid "After Pages"
 msgstr "Nach Seiten"
 
-#: functions.php:247
+#: functions.php:249
 msgctxt "widget area description"
 msgid "Appears below static pages."
 msgstr "Erscheint unter statischen Seiten."
 
-#: functions.php:256
+#: functions.php:258
 msgid "Before Footer"
 msgstr "Vor dem Footer"
 
-#: functions.php:258
+#: functions.php:260
 msgctxt "widget area description"
 msgid "Appears above the footer area."
 msgstr "Erscheint über dem Footer-Bereich."
 
-#: functions.php:267
+#: functions.php:269
 msgid "Footer Column 1"
 msgstr "Footer Spalte 1"
 
-#: functions.php:269
+#: functions.php:271
 msgctxt "widget area description"
 msgid "Appears in the first column in footer."
 msgstr "Erscheint in der ersten Spalte im Footer."
 
-#: functions.php:278
+#: functions.php:280
 msgid "Footer Column 2"
 msgstr "Footer Spalte 2"
 
-#: functions.php:280
+#: functions.php:282
 msgctxt "widget area description"
 msgid "Appears in the second column in footer."
 msgstr "Erscheint in der zweiten Spalte im Footer."
 
-#: functions.php:289
+#: functions.php:291
 msgid "Footer Column 3"
 msgstr "Footer Spalte 3"
 
-#: functions.php:291
+#: functions.php:293
 msgctxt "widget area description"
 msgid "Appears in the third column in footer."
 msgstr "Erscheint in der dritten Spalte im Footer."
 
-#: functions.php:300
+#: functions.php:302
 msgid "Footer Column 4"
 msgstr "Footer Spalte 4"
 
-#: functions.php:302
+#: functions.php:304
 msgctxt "widget area description"
 msgid "Appears in the fourth column in footer."
 msgstr "Erscheint in der vierten Spalte im Footer."
 
-#: functions.php:311
+#: functions.php:313
 msgid "Footer Copyright"
 msgstr "Footer Copyright"
 
-#: functions.php:313
+#: functions.php:315
 msgctxt "widget area description"
 msgid "Appears in the bottom footer line."
 msgstr "Erscheint in der unteren Zeile im Footer."
 
-#: functions.php:343
+#: functions.php:345
 msgid ""
 "Updating this theme will lose any customizations you have made. 'Cancel' to "
 "stop, 'OK' to update."
@@ -184,7 +188,7 @@ msgstr ""
 "Bei der Aktualisierung dieses Themes gehen alle Modifikationen verloren. "
 "Klicke \"Abbrechen\" um zu stoppen, \"OK\" um zu aktualisieren."
 
-#: functions.php:344
+#: functions.php:346
 #, php-format
 msgid ""
 "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
@@ -349,32 +353,69 @@ msgid "Blog Settings"
 msgstr "Blog-Einstellungen"
 
 #: inc/customizer/sections/blog-settings.php:34
+msgid "Blog Content"
+msgstr "Blog-Content"
+
+#: inc/customizer/sections/blog-settings.php:40
+msgid "Full post"
+msgstr "Voller Beitrag"
+
+#: inc/customizer/sections/blog-settings.php:41
+msgid "Post excerpt"
+msgstr "Beitragsauszug"
+
+#: inc/customizer/sections/blog-settings.php:54
+msgid "Excerpt Length"
+msgstr "Länge des Beitragsauszugs"
+
+#: inc/customizer/sections/blog-settings.php:70
 msgid "Number of Posts"
 msgstr "Anzahl der Beiträge"
 
-#: inc/customizer/sections/blog-settings.php:52
+#: inc/customizer/sections/blog-settings.php:80
+msgid "Featured Images"
+msgstr "Beitragsbilder"
+
+#: inc/customizer/sections/blog-settings.php:96
+msgid "Display images on blog and archives"
+msgstr "Beitragsbilder im Blog und Archiven anzeigen"
+
+#: inc/customizer/sections/blog-settings.php:129
+msgid "Display images on single posts"
+msgstr "Beitragsbilder in einzelnen Beiträgen anzeigen"
+
+#: inc/customizer/sections/blog-settings.php:145
 msgid "Post Details"
 msgstr "Beitrag-Details"
 
-#: inc/customizer/sections/blog-settings.php:68
+#: inc/customizer/sections/blog-settings.php:161
 msgid "Display date"
 msgstr "Datum anzeigen"
 
-#: inc/customizer/sections/blog-settings.php:84
+#: inc/customizer/sections/blog-settings.php:177
 msgid "Display author"
 msgstr "Autor anzeigen"
 
-#: inc/customizer/sections/blog-settings.php:100
+#: inc/customizer/sections/blog-settings.php:193
 msgid "Display categories"
 msgstr "Kategorien anzeigen"
 
-#: inc/customizer/sections/blog-settings.php:110
+#: inc/customizer/sections/blog-settings.php:203
+#: inc/customizer/sections/blog-settings.php:229
 msgid "Single Post"
 msgstr "Einzelner Beitrag"
 
-#: inc/customizer/sections/blog-settings.php:126
+#: inc/customizer/sections/blog-settings.php:219
+msgid "Display comments"
+msgstr "Kommentare anzeigen"
+
+#: inc/customizer/sections/blog-settings.php:245
 msgid "Display tags"
 msgstr "Schlagwörter anzeigen"
+
+#: inc/customizer/sections/blog-settings.php:261
+msgid "Display previous/next post navigation"
+msgstr "Navigation für vorherigen/nächsten Beitrag anzeigen"
 
 #: inc/customizer/sections/layout-settings.php:17
 msgid "Layout Settings"
@@ -430,50 +471,55 @@ msgstr "Theme Farben"
 
 #: inc/customizer/sections/theme-color-settings.php:34
 msgctxt "Color Option"
-msgid "Header Background"
-msgstr "Header Hintergrund"
+msgid "Header Bar Background"
+msgstr "Header-Bar-Hintergrund"
 
 #: inc/customizer/sections/theme-color-settings.php:50
 msgctxt "Color Option"
-msgid "Header Text"
-msgstr "Header Text"
+msgid "Header Bar Hover"
+msgstr "Header-Bar-Hover"
 
 #: inc/customizer/sections/theme-color-settings.php:66
 msgctxt "Color Option"
-msgid "Header Hover"
-msgstr "Header Hover"
+msgid "Page Background"
+msgstr "Theme Hintergrund"
 
 #: inc/customizer/sections/theme-color-settings.php:82
+msgctxt "Color Option"
+msgid "Header Link Hover"
+msgstr "Header Link-Hover"
+
+#: inc/customizer/sections/theme-color-settings.php:98
 msgctxt "Color Option"
 msgid "Titles"
 msgstr "Titel"
 
-#: inc/customizer/sections/theme-color-settings.php:98
+#: inc/customizer/sections/theme-color-settings.php:114
 msgctxt "Color Option"
 msgid "Title Hover"
 msgstr "Titel-Hover"
 
-#: inc/customizer/sections/theme-color-settings.php:114
+#: inc/customizer/sections/theme-color-settings.php:130
 msgctxt "Color Option"
 msgid "Links"
 msgstr "Links"
 
-#: inc/customizer/sections/theme-color-settings.php:130
+#: inc/customizer/sections/theme-color-settings.php:146
 msgctxt "Color Option"
 msgid "Link Hover"
 msgstr "Link-Hover"
 
-#: inc/customizer/sections/theme-color-settings.php:146
+#: inc/customizer/sections/theme-color-settings.php:162
 msgctxt "Color Option"
 msgid "Buttons"
 msgstr "Buttons"
 
-#: inc/customizer/sections/theme-color-settings.php:162
+#: inc/customizer/sections/theme-color-settings.php:178
 msgctxt "Color Option"
 msgid "Button Hover"
 msgstr "Button-Hover"
 
-#: inc/customizer/sections/theme-color-settings.php:178
+#: inc/customizer/sections/theme-color-settings.php:194
 msgctxt "Color Option"
 msgid "Footer"
 msgstr "Footer"
@@ -646,48 +692,63 @@ msgstr "Services / Spalten"
 msgid "Projects"
 msgstr "Projekte"
 
-#: inc/template-tags.php:98
+#: inc/template-tags.php:116
 msgid "Search"
 msgstr "Suchen"
 
-#: inc/template-tags.php:187
+#: inc/template-tags.php:205
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
 
-#: inc/template-tags.php:266
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr "Veröffentlicht am %s"
-
-#: inc/template-tags.php:284
+#: inc/template-tags.php:309
 #, php-format
 msgid "View all posts by %s"
 msgstr "Alle Artikel von %s ansehen"
 
-#: inc/template-tags.php:290
+#: inc/template-tags.php:315
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr "von %s"
 
-#: inc/template-tags.php:312
-#, php-format
-msgctxt "post category"
-msgid "in %s"
-msgstr "in %s"
+#: inc/template-tags.php:358
+msgid "No comments"
+msgstr "Keine Kommentare"
 
-#: inc/template-tags.php:327
+#: inc/template-tags.php:359
+msgid "1 comment"
+msgstr "1 Kommentar"
+
+#: inc/template-tags.php:360
+#, php-format
+msgid "% comments"
+msgstr "% Kommentare"
+
+#: inc/template-tags.php:378
 msgid "Tags: "
 msgstr "Schlagwörter: "
 
-#: inc/template-tags.php:345
+#: inc/template-tags.php:395 template-parts/post/content.php:24
+msgid "Continue reading"
+msgstr "Weiterlesen"
+
+#: inc/template-tags.php:411
+msgctxt "post navigation"
+msgid "Previous Post"
+msgstr "Vorheriger Beitrag"
+
+#: inc/template-tags.php:412
+msgctxt "post navigation"
+msgid "Next Post"
+msgstr "Nächster Beitrag"
+
+#: inc/template-tags.php:428
 msgctxt "pagination"
 msgid "Previous Posts"
 msgstr "Vorherige Beiträge"
 
-#: inc/template-tags.php:346
+#: inc/template-tags.php:429
 msgctxt "pagination"
 msgid "Next Posts"
 msgstr "Nächste Beiträge"
@@ -708,13 +769,18 @@ msgid "Search"
 msgstr "Suchen"
 
 #: template-parts/footer/footer-menus.php:19
-#: template-parts/header/site-navigation.php:24
+#: template-parts/header/site-navigation.php:22
 msgid "Primary Menu"
 msgstr "Hauptmenü"
 
+#: template-parts/header/header-bar.php:61
 #: template-parts/header/site-navigation.php:17
 msgid "Menu"
 msgstr "Menü"
+
+#: template-parts/header/header-bar.php:66
+msgid "Secondary Menu"
+msgstr "Sekundäres Menü"
 
 #: template-parts/page/content-none.php:14
 msgid "Nothing Found"
@@ -744,9 +810,19 @@ msgstr ""
 "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht "
 "hast. Möglicherweise hilft eine Suche."
 
-#: template-parts/post/content.php:24
-msgid "Continue reading"
-msgstr "Weiterlesen"
+#~ msgctxt "Color Option"
+#~ msgid "Header Text"
+#~ msgstr "Header Text"
+
+#, php-format
+#~ msgctxt "post date"
+#~ msgid "Posted on %s"
+#~ msgstr "Veröffentlicht am %s"
+
+#, php-format
+#~ msgctxt "post category"
+#~ msgid "in %s"
+#~ msgstr "in %s"
 
 #~ msgid "Install Plugin"
 #~ msgstr "Plugin installieren"
