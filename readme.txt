@@ -74,20 +74,16 @@ Copyright: 2020 Ari Stathopoulos, WordPress Themes Team
 License: Distributed under the terms of the Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
 Copyright: Rasmus Andersson
 
-8. The first photo used in screenshot.png is from StockSnap: https://stocksnap.io/photo/blonde-woman-S6JWBGXSUM
-License: Distributed under the terms of the Creative Commons CC0 license (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: Nordwood Themes (https://stocksnap.io/author/nordwood)
+Images used in screenshot.png are all licensed under CC0
 
-9. The second photo used in screenshot.png is from StockSnap: https://stocksnap.io/photo/man-phone-KNSJXBFYFZ
-License: Distributed under the terms of the Creative Commons CC0 license (https://creativecommons.org/publicdomain/zero/1.0/)
-Copyright: Nordwood Themes (https://stocksnap.io/author/nordwood)
+Image 1:
+https://stocksnap.io/photo/glass-building-1YJBT7XEEB
+Copyright: Matt Bango (https://stocksnap.io/author/mattbangophotos)
 
-10. Images used only in the theme demo, not within theme files:
-https://stocksnap.io/photo/blonde-woman-S6JWBGXSUM
-https://stocksnap.io/photo/man-phone-KNSJXBFYFZ
-https://stocksnap.io/photo/blue-denim-UMLWILXWPK
-https://stocksnap.io/photo/person-woman-5GB7LPF8SD
-https://stocksnap.io/photo/people-woman-GZUHDFGSCN
-https://stocksnap.io/photo/people-woman-48XGPERBAM
-https://stocksnap.io/photo/hands-rings-6UB9F6E2HT
-https://stocksnap.io/photo/man-blue-DG2WOSY6EL
+Image 2:
+https://stocksnap.io/photo/modern-building-8KGCJNXKCJ
+Copyright: Bob Richards (https://stocksnap.io/author/bobrichards)
+
+Image 3:
+https://stocksnap.io/photo/architecture-building-DJGVF6SCNZ
+Copyright: Chris HP (https://stocksnap.io/author/chrishp)
