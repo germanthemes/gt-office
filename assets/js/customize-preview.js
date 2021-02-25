@@ -259,7 +259,7 @@
 			}
 
 			document.documentElement.style.setProperty( '--gt-office--page-background-color', newval );
-			document.documentElement.style.setProperty( '--gt-office--header-background-color', newval );
+			document.documentElement.style.setProperty( '--gt-office--header-color', newval );
 
 			document.documentElement.style.setProperty( '--gt-office--text-color', text_color );
 			document.documentElement.style.setProperty( '--gt-office--light-text-color', light_text_color );
