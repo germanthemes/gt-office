@@ -42,6 +42,12 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 					</a>
 				</p>
 
+				<p>
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/gt-office/reviews/', 'gt-office' ) ); ?>" target="_blank">
+						<?php esc_html_e( 'Rate this theme', 'gt-office' ); ?>
+					</a>
+				</p>
+
 			</div>
 
 			<?php

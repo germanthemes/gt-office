@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GT Office\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2021-02-24 14:35+0100\n"
-"PO-Revision-Date: 2021-02-24 14:37+0100\n"
+"POT-Creation-Date: 2021-07-15 10:14+0200\n"
+"PO-Revision-Date: 2021-07-15 10:14+0200\n"
 "Last-Translator: \n"
 "Language-Team: GermanThemes <support@germanthemes.de>\n"
 "Language: de_DE\n"
@@ -180,31 +180,11 @@ msgctxt "widget area description"
 msgid "Appears in the bottom footer line."
 msgstr "Erscheint in der unteren Zeile im Footer."
 
-#: functions.php:345
-msgid ""
-"Updating this theme will lose any customizations you have made. 'Cancel' to "
-"stop, 'OK' to update."
-msgstr ""
-"Bei der Aktualisierung dieses Themes gehen alle Modifikationen verloren. "
-"Klicke \"Abbrechen\" um zu stoppen, \"OK\" um zu aktualisieren."
-
-#: functions.php:346
-#, php-format
-msgid ""
-"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
-"title=\"%4$s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</"
-"a>."
-msgstr ""
-"<strong>%1$s %2$s</strong> ist verfügbar. <a href=\"%3$s\" class=\"thickbox"
-"\" title=\"%4$s\">Finde heraus, was es Neues gibt</a> oder <a href=\"%5$s"
-"\"%6$s>aktualisiere jetzt</a>."
-
 #: header.php:26
 msgid "Skip to content"
 msgstr "Zum Inhalt springen"
 
-#: inc/admin/back-compat.php:42 inc/admin/back-compat.php:52
-#: inc/admin/back-compat.php:65
+#: inc/back-compat.php:42 inc/back-compat.php:52 inc/back-compat.php:65
 #, php-format
 msgid ""
 "%1$s requires at least WordPress version %2$s. You are running version %3$s. "
@@ -225,57 +205,6 @@ msgstr "Nächste Schriftart"
 msgctxt "default font button"
 msgid "Default"
 msgstr "Standard"
-
-#: inc/customizer/controls/license-control.php:51
-msgid "Activate License"
-msgstr "Lizenz aktivieren"
-
-#: inc/customizer/controls/license-control.php:52
-msgid "Deactivate License"
-msgstr "Lizenz deaktivieren"
-
-#: inc/customizer/controls/license-control.php:53
-msgid "Loading..."
-msgstr "Wird geladen..."
-
-#: inc/customizer/controls/license-control.php:54
-msgid "Active"
-msgstr "Aktiv"
-
-#: inc/customizer/controls/license-control.php:55
-msgid "Invalid"
-msgstr "Ungültig"
-
-#: inc/customizer/controls/license-control.php:56
-msgid "Expired"
-msgstr "Abgelaufen"
-
-#: inc/customizer/controls/license-control.php:57
-msgid "Inactive"
-msgstr "Inaktiv"
-
-#: inc/customizer/controls/license-control.php:58
-msgid "You are receiving updates."
-msgstr "Du erhältst Updates."
-
-#: inc/customizer/controls/license-control.php:59
-msgid ""
-"Please make sure you have not reached site limits and/or expiration date."
-msgstr ""
-"Bitte stelle sicher, dass du nicht das Seiten-Limit und/oder Ablaufdatum "
-"erreicht hast."
-
-#: inc/customizer/controls/license-control.php:60
-msgid ""
-"Your license has expired, renew today to continue getting updates and "
-"support!"
-msgstr ""
-"Deine Lizenz ist abgelaufen. Bitte erneuere sie, um weiterhin Updates und "
-"Support zu erhalten!"
-
-#: inc/customizer/controls/license-control.php:81
-msgid "License Status"
-msgstr "Lizenz-Status"
 
 #: inc/customizer/controls/links-control.php:25
 msgid "Theme Links"
@@ -301,11 +230,19 @@ msgstr "https://germanthemes.de/doku/gt-office-dokumentation/"
 msgid "Theme Documentation"
 msgstr "Theme Dokumentation"
 
-#: inc/customizer/customizer.php:38
+#: inc/customizer/controls/links-control.php:46
+msgid "https://wordpress.org/support/theme/gt-office/reviews/"
+msgstr "https://de.wordpress.org/support/theme/gt-office/reviews/"
+
+#: inc/customizer/controls/links-control.php:47
+msgid "Rate this theme"
+msgstr "Theme bewerten"
+
+#: inc/customizer/customizer.php:37
 msgid "Theme Options"
 msgstr "Theme Optionen"
 
-#: inc/customizer/customizer.php:43
+#: inc/customizer/customizer.php:42
 msgid "Background"
 msgstr "Hintergrund"
 
@@ -449,22 +386,6 @@ msgstr "Scroll-to-Top Button"
 msgid "Enable Scroll-to-Top Button"
 msgstr "Scroll-to-Top Button aktivieren"
 
-#: inc/customizer/sections/license-settings.php:19
-msgid "License"
-msgstr "Lizenz"
-
-#: inc/customizer/sections/license-settings.php:20
-msgid ""
-"Please enter your license key. An active license key is necessary for "
-"automatic theme updates and support."
-msgstr ""
-"Bitte trage deinen Lizenzschlüssel ein. Eine aktive Lizenz ist notwendig, um "
-"automatische Updates und Support zu erhalten."
-
-#: inc/customizer/sections/license-settings.php:44
-msgid "License Key"
-msgstr "Lizenzschlüssel"
-
 #: inc/customizer/sections/theme-color-settings.php:17
 msgid "Theme Colors"
 msgstr "Theme Farben"
@@ -523,6 +444,10 @@ msgstr "Button-Hover"
 msgctxt "Color Option"
 msgid "Footer"
 msgstr "Footer"
+
+#: inc/customizer/sections/theme-info-settings.php:19
+msgid "Theme Info"
+msgstr "Theme Info"
 
 #: inc/customizer/sections/typography-settings.php:19
 msgid "Typography"
@@ -653,42 +578,38 @@ msgid "GT Office"
 msgstr "GT Office"
 
 #: inc/gutenberg.php:125
-msgid "Hero Left"
-msgstr "Hero Links"
+msgid "Hero Section"
+msgstr "Hero Abschnitt"
 
 #: inc/gutenberg.php:131
-msgid "Hero Right"
-msgstr "Hero Rechts"
-
-#: inc/gutenberg.php:137
 msgid "Features"
 msgstr "Features"
 
-#: inc/gutenberg.php:143
+#: inc/gutenberg.php:137
 msgid "Portfolio Grid"
 msgstr "Portfolio / Grid"
 
-#: inc/gutenberg.php:149
+#: inc/gutenberg.php:143
 msgid "Portfolio List"
 msgstr "Portfolio / Liste"
 
-#: inc/gutenberg.php:155
+#: inc/gutenberg.php:149
 msgid "Portfolio Gallery"
 msgstr "Portfolio / Galerie"
 
-#: inc/gutenberg.php:161
+#: inc/gutenberg.php:155
 msgid "Services List"
 msgstr "Services / Liste"
 
-#: inc/gutenberg.php:167
+#: inc/gutenberg.php:161
 msgid "Services / About"
 msgstr "Services / About"
 
-#: inc/gutenberg.php:173
+#: inc/gutenberg.php:167
 msgid "Services Columns"
 msgstr "Services / Spalten"
 
-#: inc/gutenberg.php:179
+#: inc/gutenberg.php:173
 msgid "Projects"
 msgstr "Projekte"
 
@@ -809,6 +730,79 @@ msgid ""
 msgstr ""
 "Es sieht so aus, als ob wir nicht das finden konnten, wonach du gesucht "
 "hast. Möglicherweise hilft eine Suche."
+
+#~ msgid ""
+#~ "Updating this theme will lose any customizations you have made. 'Cancel' "
+#~ "to stop, 'OK' to update."
+#~ msgstr ""
+#~ "Bei der Aktualisierung dieses Themes gehen alle Modifikationen verloren. "
+#~ "Klicke \"Abbrechen\" um zu stoppen, \"OK\" um zu aktualisieren."
+
+#, php-format
+#~ msgid ""
+#~ "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox"
+#~ "\" title=\"%4$s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update "
+#~ "now</a>."
+#~ msgstr ""
+#~ "<strong>%1$s %2$s</strong> ist verfügbar. <a href=\"%3$s\" class="
+#~ "\"thickbox\" title=\"%4$s\">Finde heraus, was es Neues gibt</a> oder <a "
+#~ "href=\"%5$s\"%6$s>aktualisiere jetzt</a>."
+
+#~ msgid "Activate License"
+#~ msgstr "Lizenz aktivieren"
+
+#~ msgid "Deactivate License"
+#~ msgstr "Lizenz deaktivieren"
+
+#~ msgid "Loading..."
+#~ msgstr "Wird geladen..."
+
+#~ msgid "Active"
+#~ msgstr "Aktiv"
+
+#~ msgid "Invalid"
+#~ msgstr "Ungültig"
+
+#~ msgid "Expired"
+#~ msgstr "Abgelaufen"
+
+#~ msgid "Inactive"
+#~ msgstr "Inaktiv"
+
+#~ msgid "You are receiving updates."
+#~ msgstr "Du erhältst Updates."
+
+#~ msgid ""
+#~ "Please make sure you have not reached site limits and/or expiration date."
+#~ msgstr ""
+#~ "Bitte stelle sicher, dass du nicht das Seiten-Limit und/oder Ablaufdatum "
+#~ "erreicht hast."
+
+#~ msgid ""
+#~ "Your license has expired, renew today to continue getting updates and "
+#~ "support!"
+#~ msgstr ""
+#~ "Deine Lizenz ist abgelaufen. Bitte erneuere sie, um weiterhin Updates und "
+#~ "Support zu erhalten!"
+
+#~ msgid "License Status"
+#~ msgstr "Lizenz-Status"
+
+#~ msgid "License"
+#~ msgstr "Lizenz"
+
+#~ msgid ""
+#~ "Please enter your license key. An active license key is necessary for "
+#~ "automatic theme updates and support."
+#~ msgstr ""
+#~ "Bitte trage deinen Lizenzschlüssel ein. Eine aktive Lizenz ist notwendig, "
+#~ "um automatische Updates und Support zu erhalten."
+
+#~ msgid "License Key"
+#~ msgstr "Lizenzschlüssel"
+
+#~ msgid "Hero Right"
+#~ msgstr "Hero Rechts"
 
 #~ msgctxt "Color Option"
 #~ msgid "Header Text"
